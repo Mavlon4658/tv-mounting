@@ -16,6 +16,37 @@ body {
     margin: 0 auto;
 }
 
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin: 53px 0 26px 0;
+
+    @include media(576) {
+        margin: 20px 0;
+    }
+
+    a,
+    span,
+    li {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 100%;
+
+        @include media(576) {
+            font-size: 13px;
+        }
+    }
+
+    a {
+        color: $color-black-2;
+    }
+
+    span {
+        color: $color-grey
+    }
+}
+
 .sec {
     &-title {
         display: flex;
@@ -115,4 +146,9 @@ body {
 
 @import './layouts/header',
         './layouts/home',
+        './layouts/blog',
+        './layouts/blog-single',
+        './layouts/service',
+        './layouts/install',
+        './layouts/faq',
         './layouts/footer';
