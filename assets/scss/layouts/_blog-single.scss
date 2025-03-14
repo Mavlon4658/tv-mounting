@@ -35,12 +35,22 @@
       line-height: 200%;
       color: $color-black;
       margin: 30px 0;
+
+      @include media(576) {
+        font-size: 14px;
+        line-height: 100%;
+        margin: 0 0 20px 0;
+      }
     }
   }
 
   &_text {
     max-width: 1052px;
     margin: 0 auto 187px auto;
+
+    @include media(768) {
+      margin: 0 0 50px 0;
+    }
 
     h3 {
       font-family: Lato;
@@ -50,6 +60,11 @@
       color: $color-black-2;
       text-align: center;
       margin: 72px 0 45px 0;
+
+      @include media(576) {
+        font-size: 22px;
+        margin: 30px 0 ;
+      }
     }
 
     span {
@@ -57,6 +72,11 @@
       font-size: 20px;
       line-height: 100%;
       color: $color-black;
+
+      @include media(576) {
+        font-size: 14px;
+        line-height: 100%;
+      }
 
       a {
         color: $color-blue-21;
@@ -77,6 +97,11 @@
         font-size: 20px;
         line-height: 100%;
         color: $color-black;
+
+        @include media(576) {
+          font-size: 14px;
+          line-height: 100%;
+        }
       }
     }
 
@@ -87,6 +112,11 @@
       line-height: 100%;
       text-align: center;
       color: $color-black-2;
+
+      @include media(576) {
+        font-size: 20px;
+        margin: 20px 0;
+      }
     }
 
     p {
@@ -94,6 +124,10 @@
       font-size: 20px;
       line-height: 200%;
       color: $color-black;
+
+      @include media(576) {
+        font-size: 14px;
+      }
     }
 
   }
@@ -106,12 +140,21 @@
   .blog_bottom {
     margin: 164px 0 187px 0;
 
+    @include media(768) {
+      margin: 50px 0;
+    }
+
     &_title {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 30px;
       margin-bottom: 42px;
+
+      @include media(576) {
+        gap: 20px;
+        margin-bottom: 30px;
+      }
 
       span {
         width: 176px;
@@ -127,6 +170,11 @@
       line-height: 100%;
       color: $color-black;
       margin-bottom: 0;
+
+      @include media(576) {
+        font-size: 22px;
+        white-space: nowrap;
+      }
     }
   }
 }
