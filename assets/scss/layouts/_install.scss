@@ -7,6 +7,14 @@
     padding: 35px 0;
   }
 
+  &.install-2 {
+    margin: 120px 0 129px;
+
+    @include media(992) {
+      margin: 50px 0;
+    }
+  }
+
   .container {
     position: relative;
     z-index: 2;
