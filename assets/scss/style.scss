@@ -1,0 +1,67 @@
+@import './normalize';
+@import './global';
+
+body {
+    background: white;
+}
+
+* {
+    font-family: $font-lato;
+}
+
+.container {
+    width: calc(100% - 30px);
+    max-width: 1365px;
+    margin: 0 auto;
+}
+
+// Header
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    padding: 26px 0;
+
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-left {
+        display: flex;
+        align-items: center;
+        padding-left: 248px;
+        position: relative;
+    }
+
+    &-logo {
+        position: absolute;
+        left: 0;
+        top: -16px;
+    }
+
+    &-navs {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        a {
+            font-size: 16px;
+            line-height: 100%;
+            color: white;
+        }
+    }
+}
+// Header end
+
+// Home 
+.home {
+    height: 631px;
+    background: #01131C;
+    opacity: 0.9;
+
+}
+// Home  end
