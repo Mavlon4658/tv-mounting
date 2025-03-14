@@ -7,6 +7,16 @@ $font-roboto: "Roboto", sans-serif;
 $font-inter: "Inter", sans-serif;
 // Fonts end
 
+// colors
+$color-black-2: #142228;
+$color-black-2c: #2C2C2C;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-grey: #A5A5A5;
+$color-grey-94: #959494;
+$color-blue-21: #219EBC;
+// colors
+
 @mixin media($value) {
     @if ($value < 0) {
         @media screen and (min-width: calc($value * (-1)) + 'px') {
