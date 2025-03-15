@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV MOUNTING</title>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Style CSS file -->
+  <link rel="stylesheet" href="./assets/scss/style.css">
+</head>
+
+<body>
+
+
+  <div class="wrapper">
+    <!-- Header -->
+    <header class="header fixed">
+      <div class="container header-container">
+        <div class="header-left">
+          <button class="bars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+            </svg>
+          </button>
+          <a href="/" class="header-logo">
+            <img src="./assets/images/header-logo.svg" alt="">
+          </a>
+          <ul class="header-navs">
+            <li class="header-navs__item-wrap">
+              <a href="#" class="header-navs__link">Home</a>
+            </li>
+            <li class="header-navs__item-wrap">
+              <a href="#" class="header-navs__link">Services</a>
+              <ul class="header-navs__item">
+                <li>
+                  <a href="#">TV Mounting</a>
+                </li>
+                <li>
+                  <a href="#">In-wall wire hiding</a>
+                </li>
+                <li>
+                  <a href="#">Shelves installation</a>
+                </li>
+                <li>
+                  <a href="#">Soundbar mounting</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-navs__item-wrap">
+              <a href="#" class="header-navs__link">Locations</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header-right">
+          <a href="#" class="btn-light">
+            <img src="./assets/images/support-icon.svg" alt="">
+            <span>Chat with support</span>
+          </a>
+          <a href="#" class="btn-white">Book now</a>
+        </div>
+      </div>
+    </header>
+    <!-- Header end -->
+
+    <main>
+
+      <section class="order">
+        <div class="container">
+          <h2 class="order-title">
+            <span>A few simple steps</span> to Book Your Appointment
+          </h2>
+
+          <!-- Progress Bar -->
+          <div class="progress-bar">
+            <div class="progress-steps">
+              <div class="step active">
+                <div class="step-indicator"></div>
+                <span class="step-name active">Job details</span>
+              </div>
+              <div class="step">
+                <div class="step-indicator"></div>
+                <span class="step-name">Date and time</span>
+              </div>
+              <div class="step">
+                <div class="step-indicator"></div>
+                <span class="step-name">Location</span>
+              </div>
+              <div class="step">
+                <div class="step-indicator"></div>
+                <span class="step-name">Done!</span>
+              </div>
+            </div>
+            <div class="progress-line">
+              <div class="progress"></div>
+            </div>
+          </div>
+
+          <div class="content">
+            <!-- TV Size Section -->
+            <div class="section" id="tvSize">
+              <h2 class="content-title">What's the your TV size?</h2>
+              <div class="options">
+                <button class="option-btn" data-price="69">
+                  <span class="option-text">Up to 35"</span>
+                  <span class="price">$69</span>
+                </button>
+                <button class="option-btn" data-price="99">
+                  <span class="option-text">36-65"</span>
+                  <span class="price">$99</span>
+                </button>
+                <button class="option-btn" data-price="119">
+                  <span class="option-text">66-82"</span>
+                  <span class="price">$119</span>
+                </button>
+                <button class="option-btn" data-price="139">
+                  <span class="option-text">82" and more</span>
+                  <span class="price">$139</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- wallType -->
+            <div class="section" id="wallType">
+              <h2 class="content-title">Select your wall type</h2>
+              <div class="options">
+                <button class="option-btn active" data-price="69">
+                  <span class="option-text">Drywall</span>
+                </button>
+                <button class="option-btn" data-price="99">
+                  <span class="option-text">Brick / Concrete</span>
+                  <span class="price">$30</span>
+                </button>
+                <button class="option-btn" data-price="119">
+                  <span class="option-text">Tile</span>
+                  <span class="price">$50</span>
+                </button>
+                <button class="option-btn" data-price="139">
+                  <span class="option-text">Above Fireplace</span>
+                  <span class="price">$50</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Extra Services Section -->
+            <div class="section" id="extraServices">
+              <h2 class="content-title">Select extra services</h2>
+              <div class="options">
+                <button class="option-btn active" data-price="99">
+                  <img src="./assets/images/power-cable.svg" alt="">
+                  <span class="option-text">Conceal Wires In-Wall</span>
+                  <span class="price">$79</span>
+                </button>
+                <button class="option-btn" data-price="119">
+                  <img src="./assets/images/sound.svg" alt="">
+                  <span class="option-text">Soundbar Wall-Mounting</span>
+                  <span class="price">$40</span>
+                </button>
+                <button class="option-btn" data-price="139">
+                  <img src="./assets/images/smart-tv.svg" alt="">
+                  <span class="option-text">Old TV Dismounting</span>
+                  <span class="price">$50</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Hardware Section -->
+            <div class="section" id="hardware">
+              <h2 class="content-title">Hardware</h2>
+              <div class="options">
+                <button class="option-btn active" data-price="69">
+                  <span class="option-text">I Have My Own</span>
+                </button>
+                <button class="option-btn" data-price="99">
+                  <span class="option-text">Add Flat Mount</span>
+                  <span class="price">$39</span>
+                </button>
+                <button class="option-btn" data-price="119">
+                  <span class="option-text">Add Tilting Mount</span>
+                  <span class="price">$50</span>
+                </button>
+                <button class="option-btn" data-price="139">
+                  <span class="option-text">Add Full-Motion Mount</span>
+                  <span class="price">$50</span>
+                </button>
+                <button class="option-btn" data-price="139">
+                  <span class="option-text">Add Wire Concealment Kit</span>
+                  <span class="price">$50</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Additional TV Section -->
+            <div class="section" id="additionalTV">
+              <h2 class="content-title">Do you want to add another TV?</h2>
+              <div class="options">
+                <button class="option-btn active" data-price="69">
+                  <span class="option-text">Yes</span>
+                </button>
+                <button class="option-btn" data-price="69">
+                  <span class="option-text">No</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- date works -->
+            <div class="section" id="dateWorks">
+              <h2 class="content-title">What date works best for your installation?</h2>
+              <div class="calendar">
+                <div class="calendar-grid"></div>
+
+                <span class="selected-date" id="selectedDate">12 February 2025</span>
+
+                <div class="time-slots">
+                  <button class="time-slot selected">8-10 am</button>
+                  <button class="time-slot">10-12 am</button>
+                  <button class="time-slot">12-2 pm</button>
+                  <button class="time-slot">2-4 pm</button>
+                  <button class="time-slot">4-6 pm</button>
+                  <button class="time-slot">6-8 pm</button>
+                  <button class="time-slot">8-10 pm</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Installation Address -->
+            <div class="section" id="installationAddress">
+              <h2 class="content-title">Installation Address</h2>
+              <form class="address-form">
+                <div class="address-form_box">
+                  <label>Zip Code <span>*</span></label>
+                  <input type="number" placeholder="000000">
+                </div>
+                <div class="address-form_box">
+                  <label>City <span>*</span></label>
+                  <input type="text" placeholder="Type your city">
+                </div>
+                <div class="address-form_box">
+                  <label>Street <span>*</span></label>
+                  <input type="text" placeholder="Type your street name">
+                </div>
+                <div class="address-form_box">
+                  <label>Apt, unit, ste (optional)</label>
+                  <input type="text" placeholder="Type your address">
+                </div>
+              </form>
+            </div>
+
+            <!-- Let’s finalize your booking -->
+            <div class="section" id="booking">
+              <h2 class="content-title">Let’s finalize your booking</h2>
+              <form class="address-form">
+                <div class="address-form__box">
+                  <label>Your name <span>*</span></label>
+                  <input type="text" placeholder="Type your name">
+                </div>
+                <div class="address-form__box">
+                  <label>Phone <span>*</span></label>
+                  <input type="tel" placeholder="(000) 000-0000">
+                </div>
+                <div class="address-form__box">
+                  <label>Email</label>
+                  <input type="email" placeholder="mail@gmail.com">
+                </div>
+              </form>
+              <div class="service-table">
+                <table class="pricing-table">
+                  <thead>
+                    <tr>
+                      <th>Service</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>TV mounting 66-82"</td>
+                      <td>$120</td>
+                    </tr>
+                    <tr>
+                      <td>Installation above a Fireplace</td>
+                      <td>$70</td>
+                    </tr>
+                    <tr>
+                      <td>Wire concealment</td>
+                      <td>$90</td>
+                    </tr>
+                    <tr>
+                      <td>Old TV dismounting</td>
+                      <td>$50</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="info-texr">
+                You can conveniently pay for your TV mounting service after installation using either a credit card or
+                cash.
+              </p>
+            </div>
+
+            <div class="section congrats-section" id="congrats">
+              <h2 class="content-title">Congats! You’re all set</h2>
+              <p>
+                Thank you for scheduling your TV mounting appointment! Your request has been received, and we’ll be in
+                touch soon to confirm the details. If you have any questions or need to make changes, feel free to
+                contact us. We look forward to helping you set up your perfect viewing experience!
+              </p>
+            </div>
+
+            <!-- Total Cost and Next Button -->
+            <div class="bottom-bar">
+              <div class="total-cost">
+                <span>Total est. labor cost</span>
+                <h4 class="amount">$129</h4>
+              </div>
+              <button class="next-btn btn-orange" disabled>Next</button>
+            </div>
+
+            <a class="section-link hide" id="wallTypeLink" href="#!">Return to: chose TV size</a>
+            <a class="section-link hide" id="extraServicesLink" href="#!">Return to: select wall type</a>
+            <a class="section-link hide" id="hardwareLink" href="#!">Return to: Extra services</a>
+            <a class="section-link hide" id="additionalTVLink" href="#!">Return to: Extra services</a>
+            <a class="section-link hide" id="dateWorksLink" href="#!">Return to: add TV</a>
+            <a class="section-link hide" id="installationAddress" href="#!">Return to: date and time</a>
+            <a class="section-link hide" id="booking" href="#!">Return to: date and time</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <a href="/" class="footer_logo">
+          <img src="./assets/images/footer_logo.svg" alt="">
+        </a>
+        <div class="footer_right">
+          <div class="footer_block">
+            <h6>
+              ABOUT US
+            </h6>
+            <ul>
+              <li>
+                <a href="#" class="footer_link">
+                  About us
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer_link">
+                  Locations
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer_link">
+                  Become a pro with us
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer_block">
+            <h6>
+              CONTACT US
+            </h6>
+            <ul>
+              <li>
+                <a href="tel:+6694997524">
+                  Phone: (669) 499-7524
+                </a>
+              </li>
+              <li>
+                <a href="gmail:precision-mounting@gmail.com">
+                  Precision-mounting@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Become a pro with us
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer_block">
+            <h6>
+              WORKING TIME
+            </h6>
+            <span>
+              07:00 am - 09:00 pm
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- JS file -->
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
