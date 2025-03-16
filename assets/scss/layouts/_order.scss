@@ -182,9 +182,10 @@
     text-decoration-thickness: 0%;
     text-decoration-skip-ink: auto;
     color: #219ebc;
-    margin-top: 55px;
+    margin: 55px auto 0 auto;
     text-align: center;
     display: block;
+    width: fit-content;
     &.hide {
       display: none;
     }

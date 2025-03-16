@@ -2542,9 +2542,11 @@ body {
   -webkit-text-decoration-skip: ink;
           text-decoration-skip-ink: auto;
   color: #219ebc;
-  margin-top: 55px;
+  margin: 55px auto 0 auto;
   text-align: center;
   display: block;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .order .section-link.hide {
   display: none;
