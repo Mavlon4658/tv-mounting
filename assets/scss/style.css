@@ -1829,7 +1829,7 @@ body {
 @media screen and (max-width: 576px) {
   .blog_single_title p {
     font-size: 14px;
-    line-height: 100%;
+    line-height: 150%;
     margin: 0 0 20px 0;
   }
 }
@@ -1916,6 +1916,7 @@ body {
 @media screen and (max-width: 576px) {
   .blog_single_text p {
     font-size: 14px;
+    line-height: 150%;
   }
 }
 .blog_single_img {

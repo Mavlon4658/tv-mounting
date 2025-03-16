@@ -87,7 +87,7 @@
 
       @include media(576) {
         font-size: 14px;
-        line-height: 100%;
+        line-height: 150%;
         margin: 0 0 20px 0;
       }
     }
@@ -176,6 +176,7 @@
 
       @include media(576) {
         font-size: 14px;
+        line-height: 150%;
       }
     }
 
