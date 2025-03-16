@@ -1,5 +1,8 @@
 .order {
   margin: 79px 0 170px 0;
+  @include media(768) {
+    margin: 30px 0 50px 0;
+  }
   .container {
     max-width: 1350px;
     margin: 0 auto;
@@ -20,7 +23,7 @@
   .progress-bar {
     margin: 64px 0 96px 0;
     @include media(768) {
-      margin: 50px 0;
+      margin: 45px 0 30px 0;
     }
   }
   .progress-steps {
@@ -101,6 +104,9 @@
     flex-direction: column;
     gap: 27px;
     margin-bottom: 35px;
+    @include media(768) {
+      gap: 12px;
+    }
   }
   .option-btn {
     border: 1px solid #219ebc;
@@ -115,6 +121,9 @@
     align-items: center;
     justify-content: center;
     gap: 24px;
+    @include media(768) {
+      height: 55px;
+    }
     &.active {
       background: #219ebc;
       color: #fff;
@@ -147,7 +156,13 @@
     justify-content: space-between;
     max-width: 450px;
     margin: 50px auto 0 auto;
+    @include media(768) {
+      margin: 35px auto 0 auto;
+    }
     .next-btn {
+      &:hover {
+        background: #fb8500;
+      }
       &:disabled {
         background: #afafaf;
         pointer-events: none;
@@ -218,11 +233,12 @@
     border: 1px solid #d9d9d9;
     background: #fff;
     border-radius: 3px;
-    font-family: Lato;
+    font-family: 'Lato';
     font-weight: 500;
     font-size: 20px;
     line-height: 100%;
     letter-spacing: 0%;
+    color: #000;
     vertical-align: middle;
     height: 84px;
     @include media(768) {
@@ -302,6 +318,9 @@
     display: flex;
     flex-direction: column;
     gap: 31px;
+    @include media(768) {
+      gap: 12px;
+    }
     label {
       margin-bottom: 19px;
       font-weight: 500;
@@ -333,6 +352,9 @@
   }
   .service-table {
     margin-top: 51px;
+    @include media(768) {
+      margin-bottom: 30px;
+    }
     .pricing-table {
       width: 100%;
       max-width: 600px;
@@ -362,7 +384,8 @@
       letter-spacing: 0%;
       color: #fff;
       text-align: left;
-      padding-left: 22px;
+      // padding-left: 22px;
+      padding: 22px;
     }
     th,
     td {

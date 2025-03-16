@@ -2358,6 +2358,11 @@ body {
 .order {
   margin: 79px 0 170px 0;
 }
+@media screen and (max-width: 768px) {
+  .order {
+    margin: 30px 0 50px 0;
+  }
+}
 .order .container {
   max-width: 1350px;
   margin: 0 auto;
@@ -2382,7 +2387,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .order .progress-bar {
-    margin: 50px 0;
+    margin: 45px 0 30px 0;
   }
 }
 .order .progress-steps {
@@ -2464,6 +2469,11 @@ body {
   gap: 27px;
   margin-bottom: 35px;
 }
+@media screen and (max-width: 768px) {
+  .order .options {
+    gap: 12px;
+  }
+}
 .order .option-btn {
   border: 1px solid #219ebc;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
@@ -2477,6 +2487,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 24px;
+}
+@media screen and (max-width: 768px) {
+  .order .option-btn {
+    height: 55px;
+  }
 }
 .order .option-btn.active {
   background: #219ebc;
@@ -2508,6 +2523,14 @@ body {
   justify-content: space-between;
   max-width: 450px;
   margin: 50px auto 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .order .bottom-bar {
+    margin: 35px auto 0 auto;
+  }
+}
+.order .bottom-bar .next-btn:hover {
+  background: #fb8500;
 }
 .order .bottom-bar .next-btn:disabled {
   background: #afafaf;
@@ -2580,11 +2603,12 @@ body {
   border: 1px solid #d9d9d9;
   background: #fff;
   border-radius: 3px;
-  font-family: Lato;
+  font-family: "Lato";
   font-weight: 500;
   font-size: 20px;
   line-height: 100%;
   letter-spacing: 0%;
+  color: #000;
   vertical-align: middle;
   height: 84px;
 }
@@ -2663,6 +2687,11 @@ body {
   flex-direction: column;
   gap: 31px;
 }
+@media screen and (max-width: 768px) {
+  .order .address-form {
+    gap: 12px;
+  }
+}
 .order .address-form label {
   margin-bottom: 19px;
   font-weight: 500;
@@ -2697,6 +2726,11 @@ body {
 .order .service-table {
   margin-top: 51px;
 }
+@media screen and (max-width: 768px) {
+  .order .service-table {
+    margin-bottom: 30px;
+  }
+}
 .order .service-table .pricing-table {
   width: 100%;
   max-width: 600px;
@@ -2724,7 +2758,7 @@ body {
   letter-spacing: 0%;
   color: #fff;
   text-align: left;
-  padding-left: 22px;
+  padding: 22px;
 }
 .order .service-table th,
 .order .service-table td {
