@@ -602,9 +602,8 @@ body {
   }
 }
 .home-body {
-  position: sticky;
-  top: 0;
-  z-index: 2;
+  position: relative;
+  z-index: 3;
   margin: -59px 0 86px;
   opacity: 0.97;
 }
@@ -904,6 +903,21 @@ body {
   .home-foot p {
     font-size: 13px;
   }
+}
+.home.active .home-top {
+  margin-bottom: 140px;
+}
+@media screen and (max-width: 992px) {
+  .home.active .home-top {
+    margin-bottom: 53px;
+  }
+}
+.home.active .home-body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
 }
 
 .we-can {
