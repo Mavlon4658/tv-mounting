@@ -200,6 +200,10 @@ body {
   font-size: 16px;
   font-weight: bold;
   line-height: 100%;
+  transition: 0.2s ease;
+}
+.btn-orange:hover {
+  background: #f6b367;
 }
 
 .header {
@@ -334,6 +338,12 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+.header-right .btn-white {
+  transition: 0.2s ease;
+}
+.header-right .btn-white:hover {
+  background: rgb(170, 168, 168);
 }
 @media screen and (max-width: 992px) {
   .header-right .btn-light {
@@ -592,7 +602,8 @@ body {
   }
 }
 .home-body {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 2;
   margin: -59px 0 86px;
   opacity: 0.97;
@@ -757,6 +768,10 @@ body {
 }
 .home-body .btn-orange {
   width: 180px;
+  transition: 0.2s ease;
+}
+.home-body .btn-orange:hover {
+  background: #f6b367;
 }
 @media screen and (max-width: 992px) {
   .home-body .btn-orange {
@@ -903,6 +918,7 @@ body {
   margin: 15px 0 27px;
 }
 .we-can__card {
+  width: 100%;
   position: relative;
   z-index: 1;
   height: 283px;
@@ -1597,6 +1613,13 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.blog_card {
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+.blog_card:hover span {
+  text-decoration: underline;
+}
 .blog_card img {
   border-radius: 10px 10px 0 0;
   width: 100%;
@@ -1615,6 +1638,7 @@ body {
   line-height: 121%;
   color: #000000;
   margin-top: 25px;
+  transition: 0.2s ease;
 }
 @media screen and (max-width: 768px) {
   .blog_card span {
@@ -2119,6 +2143,10 @@ body {
   padding: 26px 109px;
   border-radius: 50px;
   background: #219EBC;
+  transition: 0.2s ease;
+}
+.install a:hover {
+  background: #6ddaf5;
 }
 @media screen and (max-width: 768px) {
   .install a {

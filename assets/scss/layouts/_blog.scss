@@ -37,6 +37,15 @@
   }
 
   &_card {
+    border-radius: 10px;
+    transition: .2s ease;
+
+    &:hover {
+      span {
+        text-decoration: underline;
+      }
+    }
+
     img {
       border-radius: 10px 10px 0 0;
       width: 100%;
@@ -54,6 +63,7 @@
       line-height: 121%;
       color: $color-black;
       margin-top: 25px;
+      transition: .2s ease;
 
       @include media(768) {
         margin-top: 15px;

@@ -57,6 +57,11 @@
     padding: 26px 109px;
     border-radius: 50px;
     background: $color-blue-21;
+    transition: .2s ease;
+
+    &:hover {
+      background: $color-blue-hover;
+    }
 
     @include media(768) {
       padding: 15px 70px;
