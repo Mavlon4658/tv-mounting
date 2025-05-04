@@ -3141,6 +3141,179 @@ body {
     margin-bottom: 50px;
   }
 }
+.your_result .tabs {
+  width: 100%;
+  margin-bottom: 85px;
+}
+@media screen and (max-width: 993px) {
+  .your_result .tabs {
+    margin-bottom: 50px;
+  }
+}
+.your_result .tabs .tab-buttons {
+  display: flex;
+  gap: 7px;
+}
+.your_result .tabs .tab-buttons .tab-btn {
+  border: 1px solid #263238;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  padding: 5px 15px;
+  height: 31px;
+  width: -moz-max-content;
+  width: max-content;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  color: #000;
+}
+.your_result .tabs .tab-buttons .tab-btn.active {
+  background: #263238;
+  color: #fff;
+}
+.your_result .tabs .tab-content {
+  margin-top: 34px;
+  display: none;
+}
+@media screen and (max-width: 993px) {
+  .your_result .tabs .tab-content {
+    margin-top: 24px;
+  }
+}
+.your_result .tabs .tab-content.active {
+  display: block;
+}
+.your_result .resultSwiper {
+  width: 100%;
+}
+@media screen and (max-width: 993px) {
+  .your_result .resultSwiper {
+    overflow: visible;
+  }
+}
+.your_result .result_slider_card {
+  width: auto;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 993px) {
+  .your_result .result_slider_card {
+    gap: 15px;
+    padding: 18px 15px;
+  }
+}
+.your_result .result_slider_card img {
+  width: 100%;
+}
+.your_result .result_slider_card h6 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 130%;
+  color: #000;
+}
+@media screen and (max-width: 993px) {
+  .your_result .result_slider_card h6 {
+    font-size: 14px;
+  }
+}
+.your_result .result_slider_card span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #000;
+  background: #F3F2F2;
+  padding: 5px 10px;
+  width: -moz-max-content;
+  width: max-content;
+}
+@media screen and (max-width: 993px) {
+  .your_result .result_slider_card span {
+    font-size: 14px;
+  }
+}
+.your_result .result_slider_card h5 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  color: #219EBC;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 993px) {
+  .your_result .result_slider_card h5 {
+    font-size: 20px;
+  }
+}
+.your_result .result_slider_card h5 span {
+  margin-left: 40px;
+  background: transparent;
+}
+@media screen and (max-width: 993px) {
+  .your_result .result_slider_card h5 span {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+}
+.your_result .result_slider_card p {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 100%;
+  color: #000;
+  margin: 0;
+}
+@media screen and (max-width: 993px) {
+  .your_result .result_slider_card p {
+    font-size: 12px;
+  }
+}
+.your_result .result_slider_card .mini_text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #fff;
+  padding: 7px 20px;
+  background: #FB8500;
+  border-radius: 0 0 5px 0;
+}
+@media screen and (max-width: 993px) {
+  .your_result .result_slider_card .mini_text {
+    font-size: 12px;
+  }
+}
+.your_result .result_slider_card .mini_text.blue {
+  background: #5FC5EA;
+}
+.your_result .result_slider_card .mini_text.black {
+  background: #000;
+}
+.your_result .result_slider_card a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #fff;
+  height: 52px;
+  border-radius: 5px;
+  background: #219EBC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 993px) {
+  .your_result .result_slider_card a {
+    height: 44px;
+  }
+}
 .your_result_step {
   display: flex;
   align-items: start;
@@ -3159,11 +3332,18 @@ body {
     text-align: center;
   }
 }
+.your_result_right {
+  width: 100%;
+  max-width: 1033px;
+}
 .your_result_right h6 {
   font-weight: 700;
   font-size: 36px;
   line-height: 100%;
   color: #000;
+}
+.your_result_right h6 span {
+  color: #219EBC;
 }
 @media screen and (max-width: 993px) {
   .your_result_right h6 {
@@ -3182,6 +3362,11 @@ body {
     font-size: 14px;
     line-height: 150%;
     margin: 16px 0 40px 0;
+  }
+}
+@media screen and (max-width: 993px) {
+  .your_result_right .title_text {
+    margin: 16px 0;
   }
 }
 .your_result .number {

@@ -289,3 +289,40 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach((b) => b.classList.remove('active'));
+      tabContents.forEach((content) => content.classList.remove('active'));
+
+      btn.classList.add('active');
+      const target = btn.getAttribute('data-tab');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+});
+
+
+var swiper = new Swiper(".resultSwiper", {
+  slidesPerView: 1.3,
+  spaceBetween: 6,
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 26,
+    },
+  },
+});
