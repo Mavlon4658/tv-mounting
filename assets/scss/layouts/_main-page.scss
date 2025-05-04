@@ -361,3 +361,177 @@
   }
 }
 // blog_single
+
+// your_result
+.your_result {
+  margin-bottom: 97px;
+
+  @include media(993) {
+    margin-bottom: 50px;
+  }
+
+  &_step {
+    display: flex;
+    align-items: start;
+    gap: 53px;
+  }
+
+  .or_text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    color: #000;
+    display: none;
+
+    @include media(993) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &_right {
+    h6 {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 100%;
+      color: #000;
+
+      @include media(993) {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #000;
+      margin: 26px 0;
+
+      @include media(993) {
+        font-size: 14px;
+        line-height: 150%;
+        margin: 16px 0 40px 0;
+      }
+    }
+  }
+
+  .number {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    h6 {
+      font-weight: 400;
+      font-size: 128px;
+      line-height: 100%;
+      color: #CDCDCD;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 100%;
+      color: #CDCDCD;
+    }
+  }
+
+  &_title {
+    @include media(993) {
+      display: none;
+    }
+  }
+
+  &_cards {
+    display: flex;
+    gap: 80px;
+
+    @include media(993) {
+      flex-direction: column;
+      gap: 23px;
+    }
+  }
+
+  &_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_in {
+      display: flex;
+      align-items: start;
+      gap: 15px;
+      margin-bottom: 30px;
+
+      @include media(993) {
+        width: 100%;
+      }
+    }
+
+    img {
+      display: flex;
+      flex-shrink: 0;
+      height: 315px;
+      width: 194px;
+      max-width: 176px;
+
+      @include media(993) {
+        max-width: 122px;
+        height: 200px;
+      }
+    }
+
+    h6 {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 100%;
+      color: #000;
+
+      @include media(993) {
+        font-size: 22px;
+      }
+    }
+
+    p {
+      margin: 25px 0;
+
+      @include media(993) {
+        margin: 15px 0;
+      }
+    }
+
+    li,
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #000;
+
+      @include media(993) {
+        font-size: 13px;
+      }
+    }
+
+    li {
+      line-height: 180%;
+    }
+
+  }
+
+  .btn-orange {
+    border-radius: 5px;
+    width: 308px;
+
+    @include media(993) {
+      height: 43px;
+      font-size: 14px;
+      width: 254px;
+    }
+
+    &.btn-blue {
+      background: #219EBC;
+    }
+  }
+}
+// your_result
