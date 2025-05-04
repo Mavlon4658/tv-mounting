@@ -1,3 +1,68 @@
+// main_header
+.main_header {
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    position: static;
+    padding-left: 0;
+  }
+
+  .bars {
+    @include media(1200) {
+      display: block !important;
+    }
+
+    @include media(-1200) {
+      display: none !important;
+    }
+  }
+
+  .header-right {
+    .btn-light {
+      @include media(1200) {
+        display: none;
+      }
+    }
+
+    .btn-white {
+      @include media(993) {
+        display: flex;
+      }
+    }
+  }
+
+  .header-navs {
+    gap: 30px;
+
+    @include media(1200) {
+      display: none;
+    }
+  }
+
+  .header-logo {
+    position: static;
+
+    @include media(1200) {
+      position: absolute;
+      top: 5px;
+      left: 78px;
+      transform: translateX(0);
+    }
+
+    @include media(993) {
+      left: 78px;
+    }
+
+    img {
+      @include media(1200) {
+        height: 28px;
+      }
+    }
+  }
+}
+// main_header
+
 // main_choose_us
 .main_choose_us {
   .sec-title {
@@ -48,6 +113,10 @@
 
   .service_blog_bottom {
     margin: 100px 0 112px 0;
+
+    @include media(993) {
+      margin: 50px 0;
+    }
   }
 }
 // main_blog
@@ -258,3 +327,37 @@
   }
 }
 // advantages
+
+// maintv_samples
+.maintv_samples {
+  margin: 98px 0;
+
+  @include media(993) {
+    margin: 50px 0;
+  }
+
+  thead {
+    h3 {
+      span {
+        color: #FB8500;
+      }
+    }
+  }
+}
+// maintv_samples
+
+// blog_single
+.blog_single {
+
+  .blog_single_text {
+    max-width: 100%;
+    margin: 0;
+
+    ul {
+      li {
+        line-height: 160%;
+      }
+    }
+  }
+}
+// blog_single
