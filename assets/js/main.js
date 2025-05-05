@@ -326,3 +326,19 @@ var swiper = new Swiper(".resultSwiper", {
     },
   },
 });
+
+let slider = document.getElementById("range");
+let value = document.querySelector(".value");
+value.innerHTML = slider.value;
+
+function calcValue() {
+  valuePercentage = (slider.value / slider.max)*100;
+    slider.style.background = `linear-gradient(to right, #8758FF ${valuePercentage}%, #ebe9e7 ${valuePercentage}%)`;
+}
+
+slider.addEventListener('input', function(){
+  calcValue();
+  value.textContent = this.value;
+})
+
+calcValue();

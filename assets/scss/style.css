@@ -3133,6 +3133,23 @@ body {
   line-height: 160%;
 }
 
+.info_block {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2509803922);
+  background: #FB8500;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 100%;
+  color: #fff !important;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 .your_result {
   margin-bottom: 97px;
 }
@@ -3199,20 +3216,6 @@ body {
     font-size: 18px;
     gap: 14px;
   }
-}
-.your_result .tv_size .info_block {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2509803922);
-  background: #FB8500;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 100%;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .your_result .tv_size .tv_recommend {
   width: 100%;
@@ -3762,8 +3765,155 @@ body {
   background: #219EBC;
 }
 
+.home_calculate_wrap {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 993px) {
+  .home_calculate_wrap {
+    display: flex;
+    order: 3;
+    width: 100%;
+  }
+}
+
+.home_calculate {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  border-radius: 45px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  height: 80px;
+}
+@media screen and (max-width: 1150px) {
+  .home_calculate {
+    flex-direction: column;
+    align-items: start;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .home_calculate {
+    margin-top: 26px;
+    width: 100%;
+  }
+}
+.home_calculate_bottom {
+  font-weight: 500;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 100%;
+  color: #fff;
+  margin-top: 20px;
+}
+@media screen and (max-width: 1150px) {
+  .home_calculate_bottom {
+    display: none;
+  }
+}
+.home_calculate_block {
+  padding: 18px 30px;
+  display: flex;
+  gap: 18px;
+}
+@media screen and (max-width: 1150px) {
+  .home_calculate_block {
+    padding: 10px 15px;
+  }
+}
+.home_calculate_block_title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-align: left;
+}
+.home_calculate_block_title .room_select {
+  margin-top: 0 !important;
+}
+.home_calculate_block_text span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #000;
+  display: flex;
+  gap: 3px;
+}
+.home_calculate_block_text span b {
+  font-weight: 600;
+  font-size: 15px;
+}
+.home_calculate .line {
+  height: 57px;
+  width: 1px;
+  background: #4D5B63;
+}
+@media screen and (max-width: 1150px) {
+  .home_calculate .line {
+    width: 100%;
+    height: 1px;
+  }
+}
+.home_calculate .calculation_btn {
+  height: 81px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: #fff;
+  background: #219EBC;
+  width: 133px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1150px) {
+  .home_calculate .calculation_btn {
+    height: 56px;
+    width: 100%;
+    font-size: 13px;
+  }
+}
+.home_calculate .room_select {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+.home_calculate .room_select select {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  color: #000;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+@media screen and (max-width: 1150px) {
+  .home_calculate .desktop_img {
+    display: none;
+  }
+}
+.home_calculate .media_img {
+  display: none;
+}
+@media screen and (max-width: 1150px) {
+  .home_calculate .media_img {
+    display: block;
+    width: 43px;
+  }
+}
+
 .main_page_home .container {
+  height: 480px;
   padding-top: 145px;
+}
+@media screen and (max-width: 1150px) {
+  .main_page_home .container {
+    height: auto;
+    padding-bottom: 28px;
+  }
 }
 @media screen and (max-width: 993px) {
   .main_page_home .container {
@@ -3791,5 +3941,6 @@ body {
     width: 100%;
     font-size: 14px;
     line-height: 20px;
+    order: 2;
   }
 }/*# sourceMappingURL=style.css.map */
