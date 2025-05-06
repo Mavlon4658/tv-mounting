@@ -1,3 +1,26 @@
+const formRange = document.querySelectorAll('.form-range__wrap');
+
+if (formRange) {
+  formRange.forEach(el => {
+    const inp = el.querySelector('.form-range input[type="range"]');
+    const line = el.querySelector('.form-range .form-line');
+    const valText = el.querySelector('.home_calculate_block_text b')
+
+    const inpHandle = () => {
+      const min = +inp.min;
+      const max = +inp.max;
+      const val = +inp.value;
+
+      line.style.width = (val - min) * 100 / (max - min) + '%';
+      valText.innerText = val + ' in';
+    }
+
+    inpHandle();
+
+    inp.oninput = () => inpHandle();
+  })
+}
+
 const items = document.querySelectorAll('.item');
 
 items.forEach((item) => {
@@ -90,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const stepSections = {
       "Job details": ["tvSize", "wallType", "extraServices", "hardware", "additionalTV"],
       "Date and time": ["dateWorks"],
-      Location: ["installationAddress"],
+      "Location": ["installationAddress"],
       "Done!": ["booking", "congrats"],
     };
 
@@ -329,16 +352,22 @@ var swiper = new Swiper(".resultSwiper", {
 
 let slider = document.getElementById("range");
 let value = document.querySelector(".value");
-value.innerHTML = slider.value;
-
-function calcValue() {
-  valuePercentage = (slider.value / slider.max)*100;
-    slider.style.background = `linear-gradient(to right, #8758FF ${valuePercentage}%, #ebe9e7 ${valuePercentage}%)`;
+if (value) {
+  value.innerHTML = slider.value;
 }
 
-slider.addEventListener('input', function(){
-  calcValue();
-  value.textContent = this.value;
-})
+function calcValue() {
+  if (slider) {
+    valuePercentage = (slider.value / slider.max)*100;
+    slider.style.background = `linear-gradient(to right, #8758FF ${valuePercentage}%, #ebe9e7 ${valuePercentage}%)`;
+  }
+}
+
+if (slider) {
+  slider.addEventListener('input', function(){
+    calcValue();
+    value.textContent = this.value;
+  })
+}
 
 calcValue();
