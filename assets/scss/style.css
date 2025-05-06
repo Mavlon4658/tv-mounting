@@ -3148,6 +3148,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  margin-right: 6px;
 }
 
 .your_result {
@@ -3915,6 +3916,12 @@ body {
 }
 .home_calculate_block_title {
   margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+}
+.home_calculate_block_title_in {
+  display: flex;
+  align-items: center;
 }
 .home_calculate_block_text {
   font-size: 14px;
@@ -3940,6 +3947,47 @@ body {
   .home_calculate_block_text_wrap {
     width: 100%;
   }
+}
+
+.home_calculate_main {
+  overflow: visible;
+}
+.home_calculate_main .calculation_btn {
+  border-radius: 0 45px 45px 0;
+}
+
+.alert {
+  position: absolute;
+  border: 1px solid #D9D9D9;
+  background: white;
+  top: -12px;
+  left: -18px;
+  transform: translateY(-100%);
+  width: 311px;
+  border-radius: 7px;
+}
+.alert:not(.active) {
+  display: none;
+}
+.alert-wrap {
+  position: relative;
+}
+.alert-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 143%;
+  padding: 13px 30px 15px 23px;
+}
+.alert button {
+  position: absolute;
+  top: 13px;
+  right: 11px;
+}
+.alert .icon {
+  position: absolute;
+  left: 18px;
+  bottom: 0;
+  transform: translateY(100%);
 }
 
 .form-range {

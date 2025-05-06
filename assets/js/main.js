@@ -41,6 +41,24 @@ if (formRange) {
   })
 }
 
+const alerts = document.querySelectorAll('.alert-wrap');
+
+if (alerts) {
+  alerts.forEach(el => {
+    const btn = el.querySelector('.info_block');
+    const alertEl = el.querySelector('.alert');
+    const alertClose = el.querySelector('.alert button');
+
+    btn.onclick = () => {
+      alertEl.classList.toggle('active');
+    }
+
+    alertClose.onclick = () => {
+      alertEl.classList.remove('active');
+    }
+  })
+}
+
 const items = document.querySelectorAll('.item');
 
 items.forEach((item) => {
