@@ -121,9 +121,17 @@
             align-items: center;
             justify-content: center;
             border-radius: 50%;
+            
+            img {
+                width: 79px;
+            }
 
             @include media(1080) {
                 top: 280px;
+
+                img {
+                    width: 50px;
+                }
             }
 
             @include media(992) {
