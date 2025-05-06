@@ -4,7 +4,8 @@ if (formRange) {
   formRange.forEach(el => {
     const inp = el.querySelector('.form-range input[type="range"]');
     const line = el.querySelector('.form-range .form-line');
-    const valText = el.querySelector('.home_calculate_block_text b')
+    const valText = el.querySelector('.home_calculate_block_text b');
+    const select = el.querySelector('select');
 
     const inpHandle = () => {
       const min = +inp.min;
@@ -12,12 +13,31 @@ if (formRange) {
       const val = +inp.value;
 
       line.style.width = (val - min) * 100 / (max - min) + '%';
-      valText.innerText = val + ' in';
+      if (valText) {
+        valText.innerText = val + ' in';
+      }
+      if (select) {
+        let op = select.options;
+
+        for (let i = 0; i < op.length; i++) {
+          if (parseInt(op[i].text) == val) {
+            select.selectedIndex = i
+          }
+        }
+
+      }
     }
 
     inpHandle();
 
     inp.oninput = () => inpHandle();
+
+    if (select) {
+      select.onchange = () => {
+        inp.value = parseInt(select.value);
+        inpHandle();
+      }
+    }
   })
 }
 

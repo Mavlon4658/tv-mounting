@@ -3904,6 +3904,9 @@ body {
     width: 43px;
   }
 }
+.home_calculate_block_title {
+  margin-bottom: 18px;
+}
 .home_calculate_block_text {
   font-size: 14px;
   color: black;
@@ -3913,6 +3916,7 @@ body {
   font-weight: bold;
 }
 .home_calculate_block_text_wrap {
+  width: 191px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3920,7 +3924,7 @@ body {
 }
 
 .form-range {
-  width: 191px;
+  width: 100%;
 }
 .form-inp {
   position: relative;
@@ -3936,6 +3940,18 @@ body {
   z-index: 2;
 }
 .form-inp input::-webkit-slider-thumb {
+  width: 21px;
+  height: 21px;
+  margin-top: -7.5px;
+  cursor: pointer;
+}
+.form-inp input::-moz-range-thumb {
+  width: 21px;
+  height: 21px;
+  margin-top: -7.5px;
+  cursor: pointer;
+}
+.form-inp input::-ms-thumb {
   width: 21px;
   height: 21px;
   margin-top: -7.5px;

@@ -1176,7 +1176,12 @@
   }
 
   &_block {
+    &_title {
+      margin-bottom: 18px;
+    }
+    
     &_text {
+
       font-size: 14px;
       color: black;
 
@@ -1186,6 +1191,7 @@
       }
 
       &_wrap {
+        width: 191px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -1198,7 +1204,7 @@
 
 .form {
   &-range {
-    width: 191px;
+    width: 100%;
   }
 
   &-inp {
@@ -1215,6 +1221,20 @@
       z-index: 2;
 
       &::-webkit-slider-thumb {
+        width: 21px;
+        height: 21px;
+        margin-top: -7.5px;
+        cursor: pointer;
+      }
+
+      &::-moz-range-thumb {
+        width: 21px;
+        height: 21px;
+        margin-top: -7.5px;
+        cursor: pointer;
+      }
+
+      &::-ms-thumb {
         width: 21px;
         height: 21px;
         margin-top: -7.5px;
