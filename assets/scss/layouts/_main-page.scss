@@ -1229,6 +1229,10 @@
 
   .calculation_btn {
     border-radius: 0 45px 45px 0;
+
+    @include media(1150) {
+      border-radius: 0 0 10px 10px;
+    }
   }
 }
 

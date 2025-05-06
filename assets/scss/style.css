@@ -3955,6 +3955,11 @@ body {
 .home_calculate_main .calculation_btn {
   border-radius: 0 45px 45px 0;
 }
+@media screen and (max-width: 1150px) {
+  .home_calculate_main .calculation_btn {
+    border-radius: 0 0 10px 10px;
+  }
+}
 
 .alert {
   position: absolute;
