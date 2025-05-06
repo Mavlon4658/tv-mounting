@@ -1172,18 +1172,28 @@
     @include media(1150) {
       display: block;
       width: 43px;
+      height: auto;
+      object-fit: contain;
+      flex-shrink: 0;
     }
   }
 
   &_block {
+    @include media(1150) {
+      width: 100%;
+    }
+
     &_title {
       margin-bottom: 18px;
     }
-    
-    &_text {
 
+    &_text {
       font-size: 14px;
       color: black;
+
+      @include media(1150) {
+        width: 100%;
+      }
 
       b {
         font-size: 18px;
@@ -1196,6 +1206,10 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 18px;
+
+        @include media(1150) {
+          width: 100%;
+        }
       }
     }
   }
