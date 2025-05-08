@@ -56,7 +56,7 @@
 
     img {
       @include media(1200) {
-        height: 28px;
+        height: 31px;
       }
     }
   }
@@ -478,7 +478,7 @@
           padding-top: 59px;
           position: relative;
         }
-
+        
         h5 {
           font-weight: 400;
           font-size: 42px;
@@ -491,12 +491,33 @@
           
           &.slide-range__value {
             min-width: 110px;
+            width: 100%;
             position: absolute;
+            text-align: left;
+            align-items: flex-start;
+            padding-left: 0;
             top: 0;
-            left: 50%;
-            transform: translateX(0);
-            width: auto;
+            left: 0;
+            background: linear-gradient(to right, #DE2323, #00FF37, #DE2323);
+            background-clip: text;
             flex-direction: 0;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -ms-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            flex-shrink: 0;
+
+            .txt-in {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 2px;
+
+              span {
+                white-space: nowrap;
+              }
+            }
           }
         }
 
@@ -1518,9 +1539,14 @@
     position: absolute;
     bottom: 0px;
     height: 7px;
+    width: 100%;
     opacity: 1;
     z-index: 2;
     opacity: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
 
     &::-webkit-slider-thumb {
       width: 100px;
@@ -1528,6 +1554,7 @@
       margin-top: -60px;
       cursor: pointer;
       border-radius: 0;
+      appearance: none;
     }
 
     &::-moz-range-thumb {
@@ -1536,6 +1563,7 @@
       margin-top: -60px;
       cursor: pointer;
       border-radius: 0;
+      appearance: none;
     }
 
     &::-ms-thumb {
@@ -1544,6 +1572,7 @@
       margin-top: -60px;
       cursor: pointer;
       border-radius: 0;
+      appearance: none;
     }
   }
 }
@@ -1687,6 +1716,10 @@
     .container {
       @include media(1150) {
         padding-bottom: 93px;
+
+        .home_calculate {
+          margin-top: -6px;
+        }
       }
     }
 

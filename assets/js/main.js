@@ -69,14 +69,14 @@ if (slideRange) {
     let min = parseInt(slideInp.min);
     let max = parseInt(slideInp.max);
     let val = parseInt(slideInp.value);
-    let textVal = text.querySelector('span');
+    let textVal = text.querySelector('.txt-in span');
     let percent = (val - min) * 100 / (max - min);
-    let textTranslate = (text.getBoundingClientRect().width * percent / 100) * (-1);
+    // let textTranslate = (text.getBoundingClientRect().width * percent / 100);
+    console.log(textVal.innerText);
     
     textVal.innerText = val + ' in*';
-    text.style.left = percent + '%';
-    text.style.transform = `translateX(${ textTranslate }px)`
-    text.style.minWidth = text.getBoundingClientRect().width + 'px';
+    
+    text.style.paddingLeft = text.getBoundingClientRect().width * percent / 100 -  textVal.getBoundingClientRect().width * percent / 100 + 'px';
   }
 
   handleInput();
