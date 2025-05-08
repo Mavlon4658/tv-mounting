@@ -3063,7 +3063,7 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .main_header .header-logo img {
-    height: 31px;
+    height: 33px;
   }
 }
 
@@ -4171,6 +4171,7 @@ body {
   .home_calculate .room_select select, .home_calculate .room_select span {
     font-size: 16px;
     font-weight: 500;
+    line-height: 120%;
   }
 }
 @media screen and (max-width: 1150px) {
