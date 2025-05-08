@@ -507,6 +507,19 @@ body {
   opacity: 0.15;
   z-index: -1;
 }
+@media screen and (max-width: 1150px) {
+  .home-top__bg {
+    display: none;
+  }
+}
+.home-top__bg.mb {
+  display: none;
+}
+@media screen and (max-width: 1150px) {
+  .home-top__bg.mb {
+    display: block;
+  }
+}
 .home-top h1 {
   font-size: 48px;
   font-weight: 600;
@@ -1022,6 +1035,11 @@ body {
 }
 .home-head .home-top__bg {
   opacity: 0.35;
+}
+@media screen and (max-width: 1150px) {
+  .home-head .home-top__bg {
+    opacity: 0.1;
+  }
 }
 .home-head .container {
   height: 588px;

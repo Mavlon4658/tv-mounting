@@ -31,6 +31,18 @@
             object-fit: cover;
             opacity: 0.15;
             z-index: -1;
+
+            @include media(1150) {
+                display: none;
+            }
+
+            &.mb {
+                display: none;
+
+                @include media(1150) {
+                    display: block;
+                }
+            }
         }
 
         h1 {
@@ -560,6 +572,10 @@
     &-head {
         .home-top__bg {
             opacity: 0.35;
+
+            @include media(1150) {
+                opacity: 0.1;
+            }
         }
 
         .container {
