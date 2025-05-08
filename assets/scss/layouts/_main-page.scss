@@ -1459,8 +1459,8 @@
     input {
       position: absolute;
       top: 0;
-      left: 0;
-      width: 100%;
+      left: -11.5px;
+      width: calc(100% + 21px);
       height: 100%;
       opacity: 0;
       z-index: 2;
@@ -1470,6 +1470,7 @@
         height: 21px;
         margin-top: -7.5px;
         cursor: pointer;
+        appearance: none;
       }
 
       &::-moz-range-thumb {
@@ -1477,6 +1478,7 @@
         height: 21px;
         margin-top: -7.5px;
         cursor: pointer;
+        appearance: none;
       }
 
       &::-ms-thumb {
@@ -1484,6 +1486,7 @@
         height: 21px;
         margin-top: -7.5px;
         cursor: pointer;
+        appearance: none;
       }
     }
   }

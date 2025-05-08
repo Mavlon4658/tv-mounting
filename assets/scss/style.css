@@ -504,7 +504,7 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 0.1;
+  opacity: 0.35;
   z-index: -1;
 }
 .home-top h1 {
@@ -4356,8 +4356,8 @@ body {
 .form-inp input {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: -11.5px;
+  width: calc(100% + 21px);
   height: 100%;
   opacity: 0;
   z-index: 2;
@@ -4367,18 +4367,23 @@ body {
   height: 21px;
   margin-top: -7.5px;
   cursor: pointer;
+  -webkit-appearance: none;
+          appearance: none;
 }
 .form-inp input::-moz-range-thumb {
   width: 21px;
   height: 21px;
   margin-top: -7.5px;
   cursor: pointer;
+  -moz-appearance: none;
+       appearance: none;
 }
 .form-inp input::-ms-thumb {
   width: 21px;
   height: 21px;
   margin-top: -7.5px;
   cursor: pointer;
+  appearance: none;
 }
 .form-line {
   width: 10%;
