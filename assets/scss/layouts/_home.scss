@@ -29,7 +29,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.35;
+            opacity: 0.15;
             z-index: -1;
         }
 
@@ -558,6 +558,10 @@
     }
 
     &-head {
+        .home-top__bg {
+            opacity: 0.35;
+        }
+
         .container {
             height: 588px;
             padding-top: 136px;

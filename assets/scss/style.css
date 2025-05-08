@@ -504,7 +504,7 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 0.35;
+  opacity: 0.15;
   z-index: -1;
 }
 .home-top h1 {
@@ -1019,6 +1019,9 @@ body {
   .home-foot p {
     font-size: 13px;
   }
+}
+.home-head .home-top__bg {
+  opacity: 0.35;
 }
 .home-head .container {
   height: 588px;
