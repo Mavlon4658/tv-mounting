@@ -242,7 +242,7 @@
       gap: 15px;
     }
 
-    li {
+    a {
       border-radius: 35px;
       background: #fff;
       padding: 16px 45px;
@@ -250,6 +250,12 @@
       font-size: 16px;
       line-height: 100%;
       color: #000;
+      transition: .2s ease-in-out all;
+
+      &:hover {
+        background: #263238;
+        color: white;
+      }
 
       @include media(993) {
         font-size: 14px;
@@ -467,6 +473,11 @@
 
       &_line {
         margin-top: 43px;
+        
+        &-block {
+          padding-top: 59px;
+          position: relative;
+        }
 
         h5 {
           font-weight: 400;
@@ -477,6 +488,16 @@
           flex-direction: column;
           align-items: center;
           gap: 2px;
+          
+          &.slide-range__value {
+            min-width: 110px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(0);
+            width: auto;
+            flex-direction: 0;
+          }
         }
 
         &_in {
@@ -808,6 +829,10 @@
       align-items: center;
       justify-content: center;
 
+      &:hover {
+        background: #34bcde;
+      }
+
       @include media(993) {
         height: 44px;
       }
@@ -1035,6 +1060,10 @@
 
     &.btn-blue {
       background: #219EBC;
+      
+      &:hover {
+        background: #34bcde;
+      }
     }
   }
 }
@@ -1093,7 +1122,32 @@
     gap: 18px;
 
     @include media(1150) {
-      padding: 10px 15px;
+      position: relative;
+      padding: 12px 15px;
+
+      &:nth-child(3) {
+        padding: 7px 15px 14px 78px;
+      }
+
+      &:nth-child(5) {
+        padding: 5px 15px 14px 78px;
+      }
+
+      &:nth-child(7) {
+        padding: 4px 15px 17px 78px;
+      }
+
+      .form-value {
+        @include media(1150) {
+          display: none !important;
+        }
+      }
+    }
+
+    .media_img {
+      position: absolute;
+      left: 22px;
+      top: 12px;
     }
 
     &_title {
@@ -1116,6 +1170,10 @@
         display: flex;
         gap: 3px;
 
+        @include media(1150) {
+          font-size: 12px;
+        }
+
         b {
           font-weight: 600;
           font-size: 15px;
@@ -1132,6 +1190,7 @@
     @include media(1150) {
       width: 100%;
       height: 1px;
+      background: #BEC7CD;
     }
   }
 
@@ -1147,6 +1206,10 @@
     align-items: center;
     justify-content: center;
 
+    &:hover {
+      background: #34bcde;
+    }
+
     @include media(1150) {
       height: 56px;
       width: 100%;
@@ -1160,7 +1223,7 @@
     align-items: center;
     gap: 1px;
 
-    select {
+    select, span {
       font-weight: 700;
       font-size: 18px;
       line-height: 100%;
@@ -1168,6 +1231,11 @@
       appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
+
+      @include media(1150) {
+        font-size: 16px;
+        font-weight: 500;
+      }
     }
   }
 
@@ -1182,7 +1250,6 @@
 
     @include media(1150) {
       display: block;
-      width: 43px;
       height: auto;
       object-fit: contain;
       flex-shrink: 0;
@@ -1192,6 +1259,7 @@
   &_block {
     @include media(1150) {
       width: 100%;
+      padding-left: 78px;
     }
 
     &_title {
@@ -1223,11 +1291,16 @@
 
       @include media(1150) {
         width: 100%;
+        font-size: 12px;
       }
 
       b {
         font-size: 18px;
         font-weight: bold;
+
+        @include media(1150) {
+          font-size: 16px;
+        }
       }
 
       &_wrap {
@@ -1239,6 +1312,7 @@
 
         @include media(1150) {
           width: 100%;
+          gap: 11px;
         }
       }
     }
@@ -1432,6 +1506,44 @@
       font-weight: 400;
       line-height: 100%;
       color: $color-black;
+    }
+  }
+}
+
+.tv_recommend_line-block {
+  position: relative;
+  z-index: 1;
+
+  input {
+    position: absolute;
+    bottom: 0px;
+    height: 7px;
+    opacity: 1;
+    z-index: 2;
+    opacity: 0;
+
+    &::-webkit-slider-thumb {
+      width: 100px;
+      height: 60px;
+      margin-top: -60px;
+      cursor: pointer;
+      border-radius: 0;
+    }
+
+    &::-moz-range-thumb {
+      width: 100px;
+      height: 60px;
+      margin-top: -60px;
+      cursor: pointer;
+      border-radius: 0;
+    }
+
+    &::-ms-thumb {
+      width: 100px;
+      height: 60px;
+      margin-top: -60px;
+      cursor: pointer;
+      border-radius: 0;
     }
   }
 }

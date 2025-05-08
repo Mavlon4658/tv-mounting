@@ -59,6 +59,31 @@ if (alerts) {
   })
 }
 
+const slideRange = document.querySelector('.slide-range');
+
+if (slideRange) {
+  const slideInp = slideRange.querySelector('input[type="range"]');
+  const text = slideRange.querySelector('.slide-range__value');
+
+  const handleInput = () => {
+    let min = parseInt(slideInp.min);
+    let max = parseInt(slideInp.max);
+    let val = parseInt(slideInp.value);
+    let textVal = text.querySelector('span');
+    let percent = (val - min) * 100 / (max - min);
+    let textTranslate = (text.getBoundingClientRect().width * percent / 100) * (-1);
+    
+    textVal.innerText = val + ' in*';
+    text.style.left = percent + '%';
+    text.style.transform = `translateX(${ textTranslate }px)`
+    text.style.minWidth = text.getBoundingClientRect().width + 'px';
+  }
+
+  handleInput();
+
+  slideInp.oninput = () => handleInput();
+}
+
 const items = document.querySelectorAll('.item');
 
 items.forEach((item) => {

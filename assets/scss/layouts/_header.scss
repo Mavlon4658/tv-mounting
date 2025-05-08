@@ -8,7 +8,7 @@
     padding: 26px 0;
 
     @include media(992) {
-        padding: 17px 0;
+        padding: 12px 0;
     }
 
     &.fixed {
@@ -149,6 +149,13 @@
 
         .btn-white {
             transition: .2s ease;
+
+            @include media(1150) {
+                height: 25px;
+                width: 102px;
+                font-size: 13px;
+                font-weight: 500;
+            }
 
             &:hover {
                 background: rgb(170, 168, 168);
