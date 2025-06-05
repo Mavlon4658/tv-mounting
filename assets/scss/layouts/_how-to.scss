@@ -46,46 +46,134 @@
   margin: 50px 0;
 }
 
-.tv-size_step {
-  padding: 60px 0;
-
-  @include media(993) {
-    padding: 50px 0;
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-  }
-
-  h3 {
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 100%;
-    color: $color-black;
-
-    @include media(993) {
-      font-size: 27px;
+.tv-size {
+  &.how-to {
+    .container {
+      @include media(992) {
+        padding-bottom: 18px;
+      }
     }
   }
 
-  p {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 100%;
-    color: $color-black;
+  .how-to__description {
+    margin-top: 26px;
+
+    @include media(992) {
+      margin-top: 15px;
+    }
   }
 
-  .btn-orange {
-    background: #219EBC;
-    width: 450px;
+  .preparation-steps {
+    margin-bottom: 0;
 
-    @include media(576) {
+    &__wrap {
+      margin-top: 50px;
+
+      @include media(992) {
+        margin-top: 17px;
+      }
+    }
+
+    &.active-1 {
+      &.active-1 {
+        &::after {
+            width: 12%;
+
+            @include media(1350) {
+                width: 14%;
+            }
+
+            @include media(1200) {
+                width: 7%;
+            }
+
+            @include media(992) {
+                width: 9%;
+            }
+        }
+
+        li {
+          p {
+            color: #ADADAD;
+          }
+        }
+
+        li:nth-child(1) {
+            span {
+                background: #E1E1E1;
+            }
+
+            p {
+                color: #ADADAD;
+            }
+        }
+
+    }
+    }
+  }
+
+  &_step {
+    padding: 60px 0;
+  
+    @include media(993) {
+      padding: 50px 0;
+    }
+  
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+  
+    h3 {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 100%;
+      color: $color-black;
+  
+      @include media(993) {
+        font-size: 27px;
+      }
+    }
+  
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 100%;
+      color: $color-black;
+    }
+
+    .home_calculate_block {
+      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+      background: #fff;
+      max-width: 450px;
       width: 100%;
-      height: 40px;
-      font-size: 14px;
+      border: 1px solid #219ebc;
+      border-radius: 3px;
+
+      padding: 20px 20px 30px;
+
+      &_text {
+        &_wrap {
+          width: 100%;
+
+          .form-value {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  
+    .btn-orange {
+      background: #219EBC;
+      width: 450px;
+  
+      @include media(576) {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+      }
     }
   }
 }

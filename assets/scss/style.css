@@ -6322,6 +6322,57 @@ body {
   margin: 50px 0;
 }
 
+@media screen and (max-width: 992px) {
+  .tv-size.how-to .container {
+    padding-bottom: 18px;
+  }
+}
+.tv-size .how-to__description {
+  margin-top: 26px;
+}
+@media screen and (max-width: 992px) {
+  .tv-size .how-to__description {
+    margin-top: 15px;
+  }
+}
+.tv-size .preparation-steps {
+  margin-bottom: 0;
+}
+.tv-size .preparation-steps__wrap {
+  margin-top: 50px;
+}
+@media screen and (max-width: 992px) {
+  .tv-size .preparation-steps__wrap {
+    margin-top: 17px;
+  }
+}
+.tv-size .preparation-steps.active-1.active-1::after {
+  width: 12%;
+}
+@media screen and (max-width: 1350px) {
+  .tv-size .preparation-steps.active-1.active-1::after {
+    width: 14%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .tv-size .preparation-steps.active-1.active-1::after {
+    width: 7%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .tv-size .preparation-steps.active-1.active-1::after {
+    width: 9%;
+  }
+}
+.tv-size .preparation-steps.active-1.active-1 li p {
+  color: #ADADAD;
+}
+.tv-size .preparation-steps.active-1.active-1 li:nth-child(1) span {
+  background: #E1E1E1;
+}
+.tv-size .preparation-steps.active-1.active-1 li:nth-child(1) p {
+  color: #ADADAD;
+}
 .tv-size_step {
   padding: 60px 0;
 }
@@ -6352,6 +6403,21 @@ body {
   font-size: 16px;
   line-height: 100%;
   color: #000000;
+}
+.tv-size_step .home_calculate_block {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  background: #fff;
+  max-width: 450px;
+  width: 100%;
+  border: 1px solid #219ebc;
+  border-radius: 3px;
+  padding: 20px 20px 30px;
+}
+.tv-size_step .home_calculate_block_text_wrap {
+  width: 100%;
+}
+.tv-size_step .home_calculate_block_text_wrap .form-value {
+  opacity: 0;
 }
 .tv-size_step .btn-orange {
   background: #219EBC;
