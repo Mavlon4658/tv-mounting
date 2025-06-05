@@ -71,8 +71,6 @@ if (slideRange) {
     let val = parseInt(slideInp.value);
     let textVal = text.querySelector('.txt-in span');
     let percent = (val - min) * 100 / (max - min);
-    // let textTranslate = (text.getBoundingClientRect().width * percent / 100);
-    console.log(textVal.innerText);
     
     textVal.innerText = val + ' in*';
     
@@ -163,6 +161,45 @@ window.addEventListener('scroll', function () {
   }
 })
 
+const preparationStep = document.querySelector('.preparation-steps');
+const preparationSwp = new Swiper('.preparation .swiper', {
+  slidesPerView: 1,
+  effect: 'fade',
+  allowTouchMove: false,
+  // initialSlide: 12,
+})
+const preparationSwpNextBtn = document.querySelectorAll('.preparation .swiper .next-btn');
+const preparationSwpPrevBtn = document.querySelectorAll('.preparation .swiper .prev-btn');
+
+if (preparationSwp) {
+  preparationSwp.on('slideChange', function (e) {
+    for (let i = 1; i <= preparationSwp.realIndex+1; i++) {
+      if (i == preparationSwp.realIndex+1) {
+        preparationStep.classList.add('active-' + i);
+      } else {
+        preparationStep.classList.remove('active-' + i);
+      }
+    }
+});
+}
+
+if (preparationSwpNextBtn.length) {
+  preparationSwpNextBtn.forEach(el => {
+    el.onclick = () => {
+      preparationSwp.slideNext();
+    }
+  })
+}
+
+if (preparationSwpPrevBtn.length) {
+  preparationSwpPrevBtn.forEach(el => {
+    el.onclick = () => {
+      preparationSwp.slidePrev();
+    }
+  })
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const steps = document.querySelectorAll(".step");
   const progress = document.querySelector(".progress");
@@ -190,18 +227,14 @@ document.addEventListener("DOMContentLoaded", () => {
     showSection(stepSections["Job details"][0]);
     updateNextButtonState();
 
-    // Option-btn lar uchun hodisa
     allOptionBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
         const parentOptions = btn.closest(".options");
         const sectionId = parentOptions.closest(".section").id;
 
-        // Agar section "wallType" yoki "extraServices" bo‘lsa, checkbox tarzida ishlaydi
         if (sectionId === "wallType" || sectionId === "extraServices") {
-          // Checkbox logikasi: tugma faol bo‘lsa o‘chiriladi, aks holda faollashtiriladi
           btn.classList.toggle("active");
         } else {
-          // Radio logikasi: boshqa tugmalarni o‘chirib, faqat tanlangan tugmani faollashtiradi
           parentOptions.querySelectorAll(".option-btn").forEach((b) => b.classList.remove("active"));
           btn.classList.add("active");
         }
@@ -210,7 +243,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Next button hodisasi
     nextBtn.addEventListener("click", () => {
       const stepNames = Object.keys(stepSections);
 
@@ -243,7 +275,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Previous section mapping
     const prevSectionMap = {
       wallTypeLink: "tvSize",
       extraServicesLink: "wallType",
@@ -282,7 +313,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Quyidagi funksiyalar o‘zgarmaydi
     function updateProgress(currentSectionId) {
       let newWidth;
       if (stepSections["Job details"].includes(currentSectionId)) {
@@ -340,7 +370,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Kalendar kodi o‘zgarmaydi, shuning uchun qisqartirib qoldirdim
     const calendarGrid = document.querySelector(".calendar-grid");
     const selectedDateElement = document.getElementById("selectedDate");
     const timeSlots = document.querySelectorAll(".time-slot");
@@ -434,3 +463,4 @@ if (slider) {
 }
 
 calcValue();
+
