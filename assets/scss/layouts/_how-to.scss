@@ -7,6 +7,10 @@
   text-align: center;
   margin-bottom: 26px;
 
+  @include media(993) {
+    gap: 10px;
+  }
+
   h3 {
     font-weight: 500;
     font-size: 36px;
@@ -19,7 +23,7 @@
     }
 
     @include media(768) {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
 
@@ -40,6 +44,10 @@
   font-size: 20px;
   line-height: 141%;
   color: $color-black-2;
+
+  @include media(768) {
+    font-size: 12px;
+  }
 }
 
 .step_faq {
@@ -114,34 +122,38 @@
 
   &_step {
     padding: 60px 0;
-  
+
     @include media(993) {
       padding: 50px 0;
     }
-  
+
     .container {
       display: flex;
       flex-direction: column;
       gap: 30px;
       align-items: center;
     }
-  
+
     h3 {
       font-weight: 700;
       font-size: 32px;
       line-height: 100%;
       color: $color-black;
-  
+
       @include media(993) {
-        font-size: 27px;
+        font-size: 24px;
       }
     }
-  
+
     p {
       font-weight: 400;
       font-size: 16px;
       line-height: 100%;
       color: $color-black;
+
+      @include media(993) {
+        font-size: 12px;
+      }
     }
 
     .home_calculate_block {
@@ -164,11 +176,11 @@
         }
       }
     }
-  
+
     .btn-orange {
       background: #219EBC;
       width: 450px;
-  
+
       @include media(576) {
         width: 100%;
         height: 40px;
@@ -205,6 +217,10 @@
       text-align: center;
       color: #FB8500;
       text-transform: uppercase;
+
+      @include media(993) {
+        font-size: 14px;
+      }
     }
 
     h3 {
@@ -214,7 +230,7 @@
       color: $color-black-2;
 
       @include media(993) {
-        font-size: 27px;
+        font-size: 24px;
       }
     }
   }
@@ -260,6 +276,10 @@
 
     .step_text {
       font-size: 16px;
+
+      @include media(768) {
+        font-size: 12px;
+      }
     }
   }
 }
@@ -288,6 +308,7 @@
 
     @include media(993) {
       width: 100%;
+      padding: 20px;
     }
 
     h6 {
@@ -329,7 +350,7 @@
       color: $color-black-2;
 
       @include media(993) {
-        font-size: 25px;
+        font-size: 20px;
       }
     }
 
@@ -342,6 +363,7 @@
 
       @include media(993) {
         margin: 20px 0;
+        font-size: 12px;
       }
     }
 
@@ -369,8 +391,8 @@
         background: #F5F5F5;
 
           @include media(993) {
-            font-size: 16px;
-            padding: 12px
+            font-size: 14px;
+            padding: 12px;
           }
       }
 
@@ -383,7 +405,7 @@
         color: #219EBC;
 
         @include media(993) {
-          font-size: 16px;
+          font-size: 14px;
         }
       }
     }
@@ -402,6 +424,10 @@
     font-size: 20px;
     line-height: 100%;
     color: $color-black-2;
+
+    @include media(993) {
+      font-size: 14px;
+    }
   }
 
   ul {
@@ -421,6 +447,10 @@
       line-height: 100%;
       color: $color-black-2;
       position: relative;
+
+      @include media(993) {
+        font-size: 14px;
+      }
 
       &::before {
         position: absolute;
@@ -467,6 +497,10 @@
       line-height: 141%;
       color: $color-black-2;
       text-align: center;
+
+      @include media(993) {
+        font-size: 20px;
+      }
     }
 
   }
@@ -493,6 +527,10 @@
       line-height: 141%;
       color: $color-black-2;
       margin-bottom: 15px;
+
+      @include media(993) {
+        font-size: 14px;
+      }
     }
 
     img {
@@ -527,6 +565,11 @@
       padding: 15px;
       background: #F5F5F5;
       padding: 15px;
+
+      @include media(993) {
+        font-size: 14px;
+        padding: 12px;
+      }
     }
   }
 
@@ -536,12 +579,20 @@
     flex-direction: column;
     gap: 30px;
 
+    @include media(993) {
+      gap: 20px;
+    }
+
     h6 {
       font-weight: 700;
       font-size: 24px;
       line-height: 141%;
       color: $color-black-2;
       text-align: center;
+
+      @include media(993) {
+        font-size: 20px;
+      }
     }
 
     img {
@@ -582,6 +633,10 @@
     line-height: 143%;
     color: $color-black-2;
     margin-bottom: 15px;
+
+    @include media(993) {
+      font-size: 20px;
+    }
   }
 }
 
@@ -609,6 +664,11 @@
     text-align: center;
     color: $color-black-2;
     margin-bottom: 20px;
+
+    @include media(993) {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
   }
 }
 // how-to

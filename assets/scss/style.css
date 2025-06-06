@@ -6282,6 +6282,11 @@ body {
   text-align: center;
   margin-bottom: 26px;
 }
+@media screen and (max-width: 993px) {
+  .step_title {
+    gap: 10px;
+  }
+}
 .step_title h3 {
   font-weight: 500;
   font-size: 36px;
@@ -6297,7 +6302,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .step_title h3 {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 .step_title span {
@@ -6316,6 +6321,11 @@ body {
   font-size: 20px;
   line-height: 141%;
   color: #142228;
+}
+@media screen and (max-width: 768px) {
+  .step_text {
+    font-size: 12px;
+  }
 }
 
 .step_faq {
@@ -6395,7 +6405,7 @@ body {
 }
 @media screen and (max-width: 993px) {
   .tv-size_step h3 {
-    font-size: 27px;
+    font-size: 24px;
   }
 }
 .tv-size_step p {
@@ -6403,6 +6413,11 @@ body {
   font-size: 16px;
   line-height: 100%;
   color: #000000;
+}
+@media screen and (max-width: 993px) {
+  .tv-size_step p {
+    font-size: 12px;
+  }
 }
 .tv-size_step .home_calculate_block {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
@@ -6460,6 +6475,11 @@ body {
   color: #FB8500;
   text-transform: uppercase;
 }
+@media screen and (max-width: 993px) {
+  .yourself_title span {
+    font-size: 14px;
+  }
+}
 .yourself_title h3 {
   font-weight: 700;
   font-size: 46px;
@@ -6468,7 +6488,7 @@ body {
 }
 @media screen and (max-width: 993px) {
   .yourself_title h3 {
-    font-size: 27px;
+    font-size: 24px;
   }
 }
 .yourself_cards {
@@ -6515,6 +6535,11 @@ body {
 .yourself_card .step_text {
   font-size: 16px;
 }
+@media screen and (max-width: 768px) {
+  .yourself_card .step_text {
+    font-size: 12px;
+  }
+}
 
 .step_plan {
   padding: 90px 0;
@@ -6542,6 +6567,7 @@ body {
 @media screen and (max-width: 993px) {
   .step_plan_left {
     width: 100%;
+    padding: 20px;
   }
 }
 .step_plan_left h6 {
@@ -6580,7 +6606,7 @@ body {
 }
 @media screen and (max-width: 993px) {
   .step_plan_right h3 {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 .step_plan_right p {
@@ -6593,6 +6619,7 @@ body {
 @media screen and (max-width: 993px) {
   .step_plan_right p {
     margin: 20px 0;
+    font-size: 12px;
   }
 }
 .step_plan_right ul {
@@ -6620,7 +6647,7 @@ body {
 }
 @media screen and (max-width: 993px) {
   .step_plan_right ul span {
-    font-size: 16px;
+    font-size: 14px;
     padding: 12px;
   }
 }
@@ -6634,7 +6661,7 @@ body {
 }
 @media screen and (max-width: 993px) {
   .step_plan_right ul a {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -6651,6 +6678,11 @@ body {
   font-size: 20px;
   line-height: 100%;
   color: #142228;
+}
+@media screen and (max-width: 993px) {
+  .step_one b {
+    font-size: 14px;
+  }
 }
 .step_one ul {
   display: flex;
@@ -6670,6 +6702,11 @@ body {
   line-height: 100%;
   color: #142228;
   position: relative;
+}
+@media screen and (max-width: 993px) {
+  .step_one ul li {
+    font-size: 14px;
+  }
 }
 .step_one ul li::before {
   position: absolute;
@@ -6710,6 +6747,11 @@ body {
   color: #142228;
   text-align: center;
 }
+@media screen and (max-width: 993px) {
+  .step_one_block h6 {
+    font-size: 20px;
+  }
+}
 .step_one .step_lists {
   display: flex;
   flex-direction: column;
@@ -6732,6 +6774,11 @@ body {
   line-height: 141%;
   color: #142228;
   margin-bottom: 15px;
+}
+@media screen and (max-width: 993px) {
+  .step_one .step_list span {
+    font-size: 14px;
+  }
 }
 .step_one .step_list img {
   min-width: 241px;
@@ -6763,11 +6810,22 @@ body {
   background: #F5F5F5;
   padding: 15px;
 }
+@media screen and (max-width: 993px) {
+  .step_one .step_list .number {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
 .step_one_img {
   margin-top: 45px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+@media screen and (max-width: 993px) {
+  .step_one_img {
+    gap: 20px;
+  }
 }
 .step_one_img h6 {
   font-weight: 700;
@@ -6775,6 +6833,11 @@ body {
   line-height: 141%;
   color: #142228;
   text-align: center;
+}
+@media screen and (max-width: 993px) {
+  .step_one_img h6 {
+    font-size: 20px;
+  }
 }
 .step_one_img img {
   width: 100%;
@@ -6813,6 +6876,11 @@ body {
   color: #142228;
   margin-bottom: 15px;
 }
+@media screen and (max-width: 993px) {
+  .step_five h6 {
+    font-size: 20px;
+  }
+}
 
 .step_six {
   margin-bottom: 90px;
@@ -6837,4 +6905,10 @@ body {
   text-align: center;
   color: #142228;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 993px) {
+  .step_six h6 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */
