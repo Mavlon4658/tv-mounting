@@ -71,9 +71,9 @@ if (slideRange) {
     let val = parseInt(slideInp.value);
     let textVal = text.querySelector('.txt-in span');
     let percent = (val - min) * 100 / (max - min);
-    
+
     textVal.innerText = val + ' in*';
-    
+
     text.style.paddingLeft = text.getBoundingClientRect().width * percent / 100 -  textVal.getBoundingClientRect().width * percent / 100 + 'px';
   }
 
@@ -173,6 +173,7 @@ const preparationSwpPrevBtn = document.querySelectorAll('.preparation .swiper .p
 
 if (preparationSwp) {
   preparationSwp.on('slideChange', function (e) {
+    window.scrollTo(0, 0);
     for (let i = 1; i <= preparationSwp.realIndex+1; i++) {
       if (i == preparationSwp.realIndex+1) {
         preparationStep.classList.add('active-' + i);

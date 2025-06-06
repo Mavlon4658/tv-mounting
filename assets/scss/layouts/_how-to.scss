@@ -19,10 +19,6 @@
     width: max-content;
 
     @include media(993) {
-      font-size: 27px;
-    }
-
-    @include media(768) {
       font-size: 20px;
     }
   }

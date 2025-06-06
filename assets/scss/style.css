@@ -6297,11 +6297,6 @@ body {
 }
 @media screen and (max-width: 993px) {
   .step_title h3 {
-    font-size: 27px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .step_title h3 {
     font-size: 20px;
   }
 }
