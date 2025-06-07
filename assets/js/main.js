@@ -173,7 +173,15 @@ const preparationSwpPrevBtn = document.querySelectorAll('.preparation .swiper .p
 
 if (preparationSwp) {
   preparationSwp.on('slideChange', function (e) {
-    window.scrollTo(0, 0);
+    setTimeout(() => {
+    const section = document.querySelector('.preparation');
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }, 100);
     for (let i = 1; i <= preparationSwp.realIndex+1; i++) {
       if (i == preparationSwp.realIndex+1) {
         preparationStep.classList.add('active-' + i);
