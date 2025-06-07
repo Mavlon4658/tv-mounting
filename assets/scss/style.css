@@ -6441,6 +6441,17 @@ body {
   }
 }
 
+.tv-size_step .home_calculate_block {
+  height: 86px;
+  padding: 15px 28px;
+}
+.tv-size_step .home_calculate_block_text_wrap {
+  gap: 16px;
+}
+.tv-size_step .home_calculate_block_text b {
+  font-size: 15px;
+}
+
 .yourself {
   padding: 70px 0;
   background: #F6F6F8;
