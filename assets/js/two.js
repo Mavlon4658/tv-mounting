@@ -1,32 +1,31 @@
-const formRange = document.querySelectorAll('.form-range__wrap');
+const formRange = document.querySelectorAll(".form-range__wrap");
 
 if (formRange) {
-  formRange.forEach(el => {
+  formRange.forEach((el) => {
     const inp = el.querySelector('.form-range input[type="range"]');
-    const line = el.querySelector('.form-range .form-line');
-    const valText = el.querySelector('.home_calculate_block_text b');
-    const select = el.querySelector('select');
+    const line = el.querySelector(".form-range .form-line");
+    const valText = el.querySelector(".home_calculate_block_text b");
+    const select = el.querySelector("select");
 
     const inpHandle = () => {
       const min = +inp.min;
       const max = +inp.max;
       const val = +inp.value;
 
-      line.style.width = (val - min) * 100 / (max - min) + '%';
+      line.style.width = ((val - min) * 100) / (max - min) + "%";
       if (valText) {
-        valText.innerText = val + ' in';
+        valText.innerText = val + " in";
       }
       if (select) {
         let op = select.options;
 
         for (let i = 0; i < op.length; i++) {
           if (parseInt(op[i].text) == val) {
-            select.selectedIndex = i
+            select.selectedIndex = i;
           }
         }
-
       }
-    }
+    };
 
     inpHandle();
 
@@ -36,180 +35,203 @@ if (formRange) {
       select.onchange = () => {
         inp.value = parseInt(select.value);
         inpHandle();
-      }
+      };
     }
-  })
+  });
 }
 
-const alerts = document.querySelectorAll('.alert-wrap');
+const alerts = document.querySelectorAll(".alert-wrap");
 
 if (alerts) {
-  alerts.forEach(el => {
-    const btn = el.querySelector('.info_block');
-    const alertEl = el.querySelector('.alert');
-    const alertClose = el.querySelector('.alert button');
+  alerts.forEach((el) => {
+    const btn = el.querySelector(".info_block");
+    const alertEl = el.querySelector(".alert");
+    const alertClose = el.querySelector(".alert button");
 
     btn.onclick = () => {
-      alertEl.classList.toggle('active');
-    }
+      alertEl.classList.toggle("active");
+    };
 
     alertClose.onclick = () => {
-      alertEl.classList.remove('active');
-    }
-  })
+      alertEl.classList.remove("active");
+    };
+  });
 }
 
-const slideRange = document.querySelector('.slide-range');
+const slideRange = document.querySelector(".slide-range");
 
 if (slideRange) {
   const slideInp = slideRange.querySelector('input[type="range"]');
-  const text = slideRange.querySelector('.slide-range__value');
+  const text = slideRange.querySelector(".slide-range__value");
 
   const handleInput = () => {
     let min = parseInt(slideInp.min);
     let max = parseInt(slideInp.max);
     let val = parseInt(slideInp.value);
-    let textVal = text.querySelector('.txt-in span');
-    let percent = (val - min) * 100 / (max - min);
+    let textVal = text.querySelector(".txt-in span");
+    let percent = ((val - min) * 100) / (max - min);
 
-    textVal.innerText = val + ' in*';
+    textVal.innerText = val + " in*";
 
-    text.style.paddingLeft = text.getBoundingClientRect().width * percent / 100 -  textVal.getBoundingClientRect().width * percent / 100 + 'px';
-  }
+    text.style.paddingLeft =
+      (text.getBoundingClientRect().width * percent) / 100 -
+      (textVal.getBoundingClientRect().width * percent) / 100 +
+      "px";
+  };
 
   handleInput();
 
   slideInp.oninput = () => handleInput();
 }
 
-const items = document.querySelectorAll('.item');
+const items = document.querySelectorAll(".item");
 
 items.forEach((item) => {
-  const header = item.querySelector('.accordion_btn');
-  const content = item.querySelector('.content');
+  const header = item.querySelector(".accordion_btn");
+  const content = item.querySelector(".content");
 
-  header.addEventListener('click', () => {
-    content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+  header.addEventListener("click", () => {
+    content.style.maxHeight = content.style.maxHeight
+      ? null
+      : content.scrollHeight + "px";
   });
 });
 
 const bodyHidden = () => {
-  document.querySelector('body').style.overflow = 'hidden';
-}
+  document.querySelector("body").style.overflow = "hidden";
+};
 
 const bodyVisible = () => {
-  document.querySelector('body').style.overflow = 'visible';
-}
+  document.querySelector("body").style.overflow = "visible";
+};
 
-const menu = document.querySelector('.menu');
-const bars = document.querySelector('.header .bars');
-const menuClose = document.querySelector('.menu-close');
-const menuBg = document.querySelector('.menu-bg');
+const menu = document.querySelector(".menu");
+const bars = document.querySelector(".header .bars");
+const menuClose = document.querySelector(".menu-close");
+const menuBg = document.querySelector(".menu-bg");
 
 const menuHide = () => {
-  menu.classList.remove('active');
-  menu.classList.add('end-active');
+  menu.classList.remove("active");
+  menu.classList.add("end-active");
   setTimeout(() => {
-    menu.classList.remove('end-active');
+    menu.classList.remove("end-active");
     bodyVisible();
   }, 400);
-}
+};
 
 bars.onclick = () => {
-  menu.classList.add('active');
+  menu.classList.add("active");
   bodyHidden();
-}
+};
 if (menuClose) menuClose.onclick = () => menuHide();
 if (menuBg) menuBg.onclick = () => menuHide();
 
-const homeSelects = document.querySelectorAll('.home-body ul li');
+const homeSelects = document.querySelectorAll(".home-body ul li");
 
 if (homeSelects.length) {
-  homeSelects.forEach(el => {
+  homeSelects.forEach((el) => {
     el.onclick = () => {
-      homeSelects.forEach(data => {
+      homeSelects.forEach((data) => {
         if (data == el) {
-          data.classList.add('selected');
+          data.classList.add("selected");
         } else {
-          data.classList.remove('selected');
+          data.classList.remove("selected");
         }
-      })
-    }
-  })
+      });
+    };
+  });
 }
 
-const home = document.querySelector('.home');
-const homeBody = document.querySelector('.home-body__wrap');
+const home = document.querySelector(".home");
+const homeBody = document.querySelector(".home-body__wrap");
 
-window.addEventListener('scroll', function () {
+window.addEventListener("scroll", function () {
   if (homeBody) {
     let elPosition = homeBody.getBoundingClientRect();
 
     if (this.window.innerWidth > 992) {
       if (elPosition.top <= 200) {
-        home.classList.add('active');
+        home.classList.add("active");
       } else {
-        home.classList.remove('active');
+        home.classList.remove("active");
       }
     } else {
       if (elPosition.top <= 133) {
-        home.classList.add('active');
+        home.classList.add("active");
       } else {
-        home.classList.remove('active');
+        home.classList.remove("active");
       }
     }
   }
-})
+});
 
-const preparationStep = document.querySelector('.preparation-steps');
-const preparationSwp = new Swiper('.preparation .swiper', {
+const preparationStep = document.querySelector(".preparation-steps");
+const preparationSwp = new Swiper(".preparation .swiper", {
   slidesPerView: 1,
-  effect: 'fade',
+  effect: "fade",
   allowTouchMove: false,
   // initialSlide: 12,
-})
-const preparationSwpNextBtn = document.querySelectorAll('.preparation .swiper .next-btn');
-const preparationSwpPrevBtn = document.querySelectorAll('.preparation .swiper .prev-btn');
+});
+const preparationSwpNextBtn = document.querySelectorAll(
+  ".preparation .swiper .next-btn"
+);
+const preparationSwpPrevBtn = document.querySelectorAll(
+  ".preparation .swiper .prev-btn"
+);
 
 if (preparationSwp) {
-  preparationSwp.on('slideChange', function (e) {
-    for (let i = 1; i <= preparationSwp.slides.length; i++) {
-      if (preparationSwp.activeIndex + 1 == i) {
-        preparationStep.classList.add("active-" + i);
-      } else {
-        setTimeout(() => {
-          preparationStep.classList.remove("active-" + i);
-        }, 200)
-      }
-    }
-    console.log(preparationStep);
+  //   preparationSwp.on('slideChange', function (e) {
+  //     setTimeout(() => {
+  //     const section = document.querySelector('.preparation');
+  //     if (section) {
+  //       section.scrollIntoView({
+  //         behavior: 'smooth',
+  //         block: 'start'
+  //       });
+  //     }
+  //   }, 100);
+  //     for (let i = 1; i <= preparationSwp.realIndex+1; i++) {
+  //       if (i == preparationSwp.realIndex+1) {
+  //         preparationStep.classList.add('active-' + i);
+  //       } else {
+  //         preparationStep.classList.remove('active-' + i);
+  //       }
+  //     }
+  // });
 
+  preparationSwp.on("slideChange", function (e) {
     setTimeout(() => {
-      const section = document.querySelector('.preparation');
-    if (section) {
-      section.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      const section = document.querySelector(".preparation");
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 100);
+
+    for (let i = 1; i <= 10; i++) {
+      preparationStep.classList.remove("active-" + i);
     }
-  }, 100);
-});
+    const currentIndex = preparationSwp.realIndex + 1;
+    preparationStep.classList.add("active-" + currentIndex);
+  });
 }
 
 if (preparationSwpNextBtn.length) {
-  preparationSwpNextBtn.forEach(el => {
+  preparationSwpNextBtn.forEach((el) => {
     el.onclick = () => {
       preparationSwp.slideNext();
-    }
-  })
+    };
+  });
 }
 
 if (preparationSwpPrevBtn.length) {
-  preparationSwpPrevBtn.forEach(el => {
+  preparationSwpPrevBtn.forEach((el) => {
     el.onclick = () => {
       preparationSwp.slidePrev();
-    }
-  })
+    };
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -223,9 +245,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (steps.length) {
     const stepSections = {
-      "Job details": ["tvSize", "wallType", "extraServices", "hardware", "additionalTV"],
+      "Job details": [
+        "tvSize",
+        "wallType",
+        "extraServices",
+        "hardware",
+        "additionalTV",
+      ],
       "Date and time": ["dateWorks"],
-      "Location": ["installationAddress"],
+      Location: ["installationAddress"],
       "Done!": ["booking", "congrats"],
     };
 
@@ -247,7 +275,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (sectionId === "wallType" || sectionId === "extraServices") {
           btn.classList.toggle("active");
         } else {
-          parentOptions.querySelectorAll(".option-btn").forEach((b) => b.classList.remove("active"));
+          parentOptions
+            .querySelectorAll(".option-btn")
+            .forEach((b) => b.classList.remove("active"));
           btn.classList.add("active");
         }
 
@@ -301,6 +331,31 @@ document.addEventListener("DOMContentLoaded", () => {
       congrats: "booking",
     };
 
+    // sectionLinks.forEach((link) => {
+    //   link.addEventListener("click", () => {
+    //     const prevSectionId = prevSectionMap[link.id];
+    //     if (prevSectionId) {
+    //       const prevSectionIndex = Array.from(sections).findIndex((section) => section.id === prevSectionId);
+    //       if (prevSectionIndex !== -1) {
+    //         currentSectionIndex = prevSectionIndex;
+    //         const stepNames = Object.keys(stepSections);
+    //         for (let i = 0; i < stepNames.length; i++) {
+    //           if (stepSections[stepNames[i]].includes(prevSectionId)) {
+    //             currentStep = i;
+    //             updateStepIndicators();
+    //             break;
+    //           }
+    //         }
+    //         updateProgress(prevSectionId);
+    //         showSection(prevSectionId);
+    //         updateSectionLink(prevSectionId);
+    //         updateNextButtonState();
+    //         nextBtn.textContent = "Next";
+    //         bottomBar.style.display = "flex";
+    //       }
+    //     }
+    //   });
+    // });
 
     sectionLinks.forEach((link) => {
       link.addEventListener("click", () => {
@@ -335,7 +390,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateProgress(currentSectionId) {
       let newWidth;
       if (stepSections["Job details"].includes(currentSectionId)) {
-        const indexInJobDetails = stepSections["Job details"].indexOf(currentSectionId);
+        const indexInJobDetails =
+          stepSections["Job details"].indexOf(currentSectionId);
         newWidth = initialProgress + indexInJobDetails * progressToDate;
       } else if (currentSectionId === "dateWorks") {
         newWidth = 38;
@@ -382,7 +438,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const currentSection = sections[currentSectionIndex];
       const optionBtns = currentSection.querySelectorAll(".option-btn");
       if (optionBtns.length > 0) {
-        const hasActive = Array.from(optionBtns).some((btn) => btn.classList.contains("active"));
+        const hasActive = Array.from(optionBtns).some((btn) =>
+          btn.classList.contains("active")
+        );
         nextBtn.disabled = !hasActive;
       } else {
         nextBtn.disabled = false;
@@ -395,10 +453,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const currentDate = new Date();
     const options = { day: "numeric", month: "long", year: "numeric" };
-    selectedDateElement.textContent = currentDate.toLocaleDateString("en-US", options);
+    selectedDateElement.textContent = currentDate.toLocaleDateString(
+      "en-US",
+      options
+    );
 
-    const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
-    const daysInMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+    const firstDayOfMonth = new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      1
+    );
+    const daysInMonth = new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth() + 1,
+      0
+    ).getDate();
 
     for (let i = 0; i < daysInMonth; i++) {
       const date = new Date(firstDayOfMonth);
@@ -406,11 +475,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const dayButton = document.createElement("button");
       dayButton.className = "calendar-day";
       dayButton.textContent = date.getDate();
-      if (date.toDateString() === currentDate.toDateString()) dayButton.classList.add("selected");
-      dayButton.addEventListener("click", () => {
-        document.querySelectorAll(".calendar-day.selected").forEach((day) => day.classList.remove("selected"));
+      if (date.toDateString() === currentDate.toDateString())
         dayButton.classList.add("selected");
-        selectedDateElement.textContent = date.toLocaleDateString("en-US", options);
+      dayButton.addEventListener("click", () => {
+        document
+          .querySelectorAll(".calendar-day.selected")
+          .forEach((day) => day.classList.remove("selected"));
+        dayButton.classList.add("selected");
+        selectedDateElement.textContent = date.toLocaleDateString(
+          "en-US",
+          options
+        );
       });
       calendarGrid.appendChild(dayButton);
     }
@@ -424,23 +499,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
-document.addEventListener('DOMContentLoaded', () => {
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabContents = document.querySelectorAll('.tab-content');
+document.addEventListener("DOMContentLoaded", () => {
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const tabContents = document.querySelectorAll(".tab-content");
 
   tabButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      tabButtons.forEach((b) => b.classList.remove('active'));
-      tabContents.forEach((content) => content.classList.remove('active'));
+    btn.addEventListener("click", () => {
+      tabButtons.forEach((b) => b.classList.remove("active"));
+      tabContents.forEach((content) => content.classList.remove("active"));
 
-      btn.classList.add('active');
-      const target = btn.getAttribute('data-tab');
-      document.getElementById(target).classList.add('active');
+      btn.classList.add("active");
+      const target = btn.getAttribute("data-tab");
+      document.getElementById(target).classList.add("active");
     });
   });
 });
-
 
 var swiper = new Swiper(".resultSwiper", {
   slidesPerView: 1.3,
@@ -469,17 +542,16 @@ if (value) {
 
 function calcValue() {
   if (slider) {
-    valuePercentage = (slider.value / slider.max)*100;
+    valuePercentage = (slider.value / slider.max) * 100;
     slider.style.background = `linear-gradient(to right, #8758FF ${valuePercentage}%, #ebe9e7 ${valuePercentage}%)`;
   }
 }
 
 if (slider) {
-  slider.addEventListener('input', function(){
+  slider.addEventListener("input", function () {
     calcValue();
     value.textContent = this.value;
-  })
+  });
 }
 
 calcValue();
-
