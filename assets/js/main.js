@@ -166,12 +166,22 @@ const preparationSwp = new Swiper('.preparation .swiper', {
   slidesPerView: 1,
   effect: 'fade',
   allowTouchMove: false,
-  // initialSlide: 12,
+  // initialSlide: 13,
 })
 const preparationSwpNextBtn = document.querySelectorAll('.preparation .swiper .next-btn');
 const preparationSwpPrevBtn = document.querySelectorAll('.preparation .swiper .prev-btn');
 
 if (preparationSwp) {
+  for (let i = 1; i <= preparationSwp.slides.length; i++) {
+    if (preparationSwp.activeIndex + 1 == i) {
+      preparationStep.classList.add("active-" + i);
+    } else {
+      setTimeout(() => {
+        preparationStep.classList.remove("active-" + i);
+      }, 200)
+    }
+  }
+
   preparationSwp.on('slideChange', function (e) {
     for (let i = 1; i <= preparationSwp.slides.length; i++) {
       if (preparationSwp.activeIndex + 1 == i) {
@@ -182,7 +192,7 @@ if (preparationSwp) {
         }, 200)
       }
     }
-    console.log(preparationStep);
+    // console.log(preparationStep);
 
     setTimeout(() => {
       const section = document.querySelector('.preparation');

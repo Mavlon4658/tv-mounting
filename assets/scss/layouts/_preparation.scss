@@ -457,8 +457,92 @@
             }
 
         }
-
         &.active-12 {
+            &::after {
+                width: 70%;
+
+                @include media(1350) {
+                    width: 71%;
+                }
+
+                @include media(1200) {
+                    width: 69%;
+                }
+
+                @include media(992) {
+                    width: 69%;
+                }
+            }
+
+            li:not(:nth-child(n+6)) {
+                span {
+                    background: #219EBC;
+                }
+    
+                p {
+                    color: #263238;
+                }
+            }
+
+        }
+        &.active-13 {
+            &::after {
+                width: 70%;
+
+                @include media(1350) {
+                    width: 71%;
+                }
+
+                @include media(1200) {
+                    width: 69%;
+                }
+
+                @include media(992) {
+                    width: 69%;
+                }
+            }
+
+            li:not(:nth-child(n+6)) {
+                span {
+                    background: #219EBC;
+                }
+    
+                p {
+                    color: #263238;
+                }
+            }
+
+        }
+        &.active-14 {
+            &::after {
+                width: 70%;
+
+                @include media(1350) {
+                    width: 71%;
+                }
+
+                @include media(1200) {
+                    width: 69%;
+                }
+
+                @include media(992) {
+                    width: 69%;
+                }
+            }
+
+            li:not(:nth-child(n+6)) {
+                span {
+                    background: #219EBC;
+                }
+    
+                p {
+                    color: #263238;
+                }
+            }
+
+        }
+
+        &.active-15 {
             &::after {
                 width: 84%;
 
@@ -487,7 +571,7 @@
 
         }
 
-        &.active-13 {
+        &.active-16 {
             &::after {
                 width: 100%;
                 background: #5CCA8E;
