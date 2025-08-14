@@ -23,6 +23,18 @@
         object-fit: cover;
         object-position: center top;
         opacity: 0.1;
+
+        @include media(768) {
+            display: none;
+        }
+
+        &.mb {
+            display: none;
+
+            @include media(768) {
+                display: block;
+            }
+        }
     }
     
     &__container {
@@ -232,16 +244,19 @@
         }
 
         @include media(1150) {
-            flex-direction: column;
-            align-items: flex-start;
+            // flex-direction: column;
+            // align-items: flex-start;
         }
 
-        @include media(768) {
+        @include media(992) {
             width: calc(100% + 30px);
             margin-left: -15px;
-            padding: 16px 15px 23px;
+            padding: 16px 15px;
             border-radius: 0;
             border: 0;
+        }
+
+        @include media(630) {
             gap: 0px;
         }
 
@@ -282,10 +297,10 @@
         .checkbox {
             position: relative;
             z-index: 1;
-            border: 1px solid #fff;
-            border-radius: 4px;
-            width: 90px;
-            height: 52px;
+            border: 1rem solid #fff;
+            border-radius: 4rem;
+            width: 90rem;
+            height: 52rem;
             background: #FFF;
             display: flex;
             align-items: center;
@@ -294,16 +309,21 @@
             &-wrap {
                 display: flex;
                 align-items: center;
-                gap: 12px;
+                gap: 12rem;
 
                 @include media(1150) {
-                    width: 100%;
+                    // width: 100%;
                     justify-content: space-between;
                 }
 
-                @include media(768) {
+                @include media(992) {
+                    // margin: 11rem 0 14rem;
+                    gap: 7rem;
+                }
+
+                @include media(630) {
+                    width: 100%;
                     margin: 11px 0 14px;
-                    gap: 7px;
                 }
     
                 input {
@@ -319,9 +339,9 @@
 
                 input:checked ~ .checkbox {
                     background: #8ecae6;
-                    border: 1px solid #219ebc;
+                    border: 1rem solid #219ebc;
 
-                    @include media(768) {
+                    @include media(992) {
                         background: #263238;
                     }
 
@@ -330,7 +350,7 @@
                         color: white;
                         font-weight: 900;
 
-                        @include media(768) {
+                        @include media(992) {
                             background: #263238;
                         }
     
@@ -350,42 +370,42 @@
                     z-index: 1;
 
                     &:nth-child(1) .checkbox {
-                        width: 90px;
-                        height: 50px;
+                        width: 90rem;
+                        height: 50rem;
 
                         @include media(768) {
-                            width: 69px;
-                            height: 40px;
+                            width: 69rem;
+                            height: 40rem;
                         }
                     }
 
                     &:nth-child(2) .checkbox {
-                        width: 100px;
-                        height: 59px;
+                        width: 100rem;
+                        height: 59rem;
 
                         @include media(768) {
-                            width: 81px;
-                            height: 45px;
+                            width: 81rem;
+                            height: 45rem;
                         }
                     }
 
                     &:nth-child(3) .checkbox {
-                        width: 114px;
-                        height: 64px;
+                        width: 114rem;
+                        height: 64rem;
 
                         @include media(768) {
-                            width: 90px;
-                            height: 49px;
+                            width: 90rem;
+                            height: 49rem;
                         }
                     }
 
                     &:nth-child(4) .checkbox {
-                        width: 120px;
-                        height: 67px;
+                        width: 120rem;
+                        height: 67rem;
 
                         @include media(768) {
-                            width: 93px;
-                            height: 52px;
+                            width: 93rem;
+                            height: 52rem;
                         }
                     }
                 }
@@ -397,39 +417,39 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: -1;
-                width: calc(100% - 16px);
+                width: calc(100% - 16rem);
                 height: auto;
             }
 
             &-text {
                 font-weight: 400;
-                font-size: 15px;
+                font-size: 15rem;
                 line-height: 100%;
                 color: #263238;
                 background: #FFF;
-                padding: 4px;
+                padding: 4rem;
 
-                @include media(768) {
-                    font-size: 12px;
-                    padding: 3.42px;
+                @include media(992) {
+                    font-size: 12rem;
+                    padding: 3.42rem;
                 }
             }
 
             span {
                 position: absolute;
                 font-weight: 400;
-                font-size: 13px;
+                font-size: 13rem;
                 line-height: 100%;
                 color: #8f8f8f;
-                border: 1px solid #d9d9d9;
-                border-radius: 50px;
-                padding: 0 12px;
+                border: 1rem solid #d9d9d9;
+                border-radius: 50rem;
+                padding: 0 12rem;
                 position: absolute;
-                height: 19px;
-                top: -12px;
+                height: 19rem;
+                top: -12rem;
                 left: 50%;
                 transform: translateX(-50%);
-                box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.05), 0 1px 4px 0 rgba(12, 12, 13, 0.1);
+                box-shadow: 0 1rem 4rem 0 rgba(12, 12, 13, 0.05), 0 1rem 4rem 0 rgba(12, 12, 13, 0.1);
                 background: #fff;
                 display: none;
                 align-items: center;
@@ -437,23 +457,23 @@
                 text-align: center;
                 z-index: 1;
 
-                @include media(768) {
-                    font-size: 12px;
-                    padding: 0 7px;
-                    height: 17px;
-                    top: -8px;
+                @include media(992) {
+                    font-size: 12rem;
+                    padding: 0 7rem;
+                    height: 17rem;
+                    top: -8rem;
                 }
             
                 &::before {
                     content: "";
-                    width: 8px;
-                    height: 8px;
+                    width: 8rem;
+                    height: 8rem;
                     background: white;
                     position: absolute;
-                    border: 1px solid #D9D9D9;
+                    border: 1rem solid #D9D9D9;
                     border-top: 0;
                     border-right: 0;
-                    bottom: -5px;
+                    bottom: -5rem;
                     left: 50%;
                     transform: translateX(-50%) rotateZ(-45deg);
                     z-index: -1;
@@ -464,25 +484,29 @@
         &-right {
             display: flex;
             align-items: center;
-            gap: 29px;
+            gap: 29rem;
 
             @include media(1150) {
-                width: 100%;
+                // width: 100%;
                 justify-content: space-between;
+            }
+
+            @include media(630) {
+                width: 100%;
             }
             
             &__in {
                 display: flex;
                 align-items: center;
-                gap: 20px;
+                gap: 20rem;
     
-                @include media(768) {
+                @include media(1150) {
                     background: #168da9;
-                    padding: 5px 22px 6px 11px;
-                    border-radius: 5px;
+                    padding: 5rem 22rem 6rem 11rem;
+                    border-radius: 5rem;
                     flex-direction: column-reverse;
                     align-items: flex-start;
-                    gap: 5px;
+                    gap: 5rem;
                 }
             }
         }
@@ -491,12 +515,12 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 12px;
+            gap: 12rem;
 
-            @include media(768) {
+            @include media(1150) {
                 display: none;
                 font-weight: 400;
-                font-size: 14px;
+                font-size: 14rem;
                 line-height: 100%;
                 color: #fff;
                 
@@ -508,14 +532,14 @@
             &.mb {
                 display: none;
 
-                @include media(768) {
+                @include media(1150) {
                     display: block;
                 }
             }
 
             &-title {
                 font-weight: 400;
-                font-size: 16px;
+                font-size: 16rem;
                 line-height: 100%;
                 color: #fff;
             }
@@ -523,35 +547,35 @@
             &-content {
                 display: flex;
                 align-items: center;
-                gap: 10px;
+                gap: 10rem;
 
                 li {
                     display: flex;
                     align-items: flex-end;
-                    gap: 2px;
+                    gap: 2rem;
                 }
 
                 span {
-                    border-radius: 3px;
-                    width: 26px;
-                    height: 38px;
+                    border-radius: 3rem;
+                    width: 26rem;
+                    height: 38rem;
                     background: #FFF;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     text-align: center;
                     font-weight: 600;
-                    font-size: 16px;
+                    font-size: 16rem;
                     line-height: 100%;
                     color: #263238;
                 }
 
                 &__text {
                     font-weight: 400;
-                    font-size: 16px;
+                    font-size: 16rem;
                     line-height: 100%;
                     color: #fff;
-                    padding-left: 1px;
+                    padding-left: 1rem;
                 }
             }
         }
@@ -561,39 +585,39 @@
             flex-direction: column;
             align-items: flex-end;
             text-align: right;
-            gap: 6px;
+            gap: 6rem;
             font-weight: 700;
-            font-size: 36px;
+            font-size: 36rem;
             line-height: 100%;
             color: #fff;
 
-            @include media(768) {
+            @include media(1150) {
                 flex-direction: row-reverse;
                 align-items: flex-start;
-                font-size: 22px;
+                font-size: 22rem;
             }
             
             del {
                 font-weight: 400;
-                font-size: 20px;
+                font-size: 20rem;
                 line-height: 100%;
                 text-decoration: line-through;
                 color: #d2d2d2;
 
-                @include media(768) {
-                    font-size: 14px;
-                    padding-top: 3px;
+                @include media(1150) {
+                    font-size: 14rem;
+                    padding-top: 3rem;
                 }
             }
         }
 
         .btn-orange {
-            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            box-shadow: 0 4rem 4rem 0 rgba(0, 0, 0, 0.25);
 
-            @include media(768) {
-                height: 52px;
-                width: 194px;
-                font-size: 14px;
+            @include media(1150) {
+                height: 52rem;
+                width: 194rem;
+                font-size: 14rem;
             }
         }
     }

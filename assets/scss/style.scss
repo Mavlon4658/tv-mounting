@@ -6,6 +6,22 @@ body {
   color: black;
 }
 
+html {
+  font-size: 1px;
+
+  @include media(870) {
+    font-size: 0.9px;
+  }
+
+  @include media(790) {
+    font-size: 0.8px;
+  }
+
+  @include media(630) {
+    font-size: 1px;
+  }
+}
+
 * {
   font-family: $font-lato;
 }
