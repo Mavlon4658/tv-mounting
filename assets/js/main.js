@@ -493,3 +493,13 @@ if (slider) {
 
 calcValue();
 
+const reviewSwp = new Swiper('.review .swiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 10,
+  breakpoints: {
+    992: {
+      spaceBetween: 19,
+      slidesPerView: 'auto',
+    }
+  }
+})

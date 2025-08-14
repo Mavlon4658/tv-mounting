@@ -2,9 +2,11 @@
 .install {
   position: relative;
   padding: 55px 0;
+  margin-bottom: 77px;
 
   @include media(768) {
     padding: 35px 0;
+    margin-bottom: 40px;
   }
 
   &.install-2 {
