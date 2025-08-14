@@ -531,7 +531,7 @@ html {
      object-position: center top;
   opacity: 0.1;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .new-home__bg {
     display: none;
   }
@@ -539,7 +539,7 @@ html {
 .new-home__bg.mb {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .new-home__bg.mb {
     display: block;
   }

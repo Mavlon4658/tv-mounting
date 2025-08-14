@@ -24,14 +24,14 @@
         object-position: center top;
         opacity: 0.1;
 
-        @include media(768) {
+        @include media(992) {
             display: none;
         }
 
         &.mb {
             display: none;
 
-            @include media(768) {
+            @include media(992) {
                 display: block;
             }
         }
