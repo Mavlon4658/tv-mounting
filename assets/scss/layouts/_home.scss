@@ -227,13 +227,13 @@
 
         @include media(1350) {
             flex-wrap: wrap;
-            row-gap: 30px;
+            row-gap: 20px;
+            border-radius: 30px;
         }
 
         @include media(1150) {
             flex-direction: column;
             align-items: flex-start;
-            row-gap: 20px;
         }
 
         @include media(768) {
@@ -273,7 +273,7 @@
                 line-height: 100%;
                 color: #fff;
 
-                @include media(768) {
+                @include media(1350) {
                     display: none;
                 }
             }
@@ -1286,6 +1286,83 @@
 }
 // Home  end
 
+// Review modal
+.review-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+        display: flex;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #222;
+        opacity: 0.66;
+    }
+
+    &__content {
+        border-radius: 20px;
+        width: 567px;
+        background: #FFF;
+        padding: 36px 33px 35px 37px;
+        position: relative;
+
+        @include media(768) {
+            width: calc(100% - 30px);
+            padding: 20px;
+        }
+
+        &-in {
+            .review-card {
+                padding: 0;
+                border: 0;
+                border-radius: 0;
+                margin: 0 !important;
+
+                &__text {
+                    display: block;
+                    -webkit-line-clamp: unset;
+                    -webkit-box-orient: unset;
+                    overflow: visible;
+                    text-overflow: unset;
+                }
+
+                .more-link {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 19px;
+        right: 27px;
+
+        @include media(768) {
+            top: 15px;
+            right: 15px;
+
+            img {
+                width: 18px;
+            }
+        }
+    }
+}
+// Review modal end
+
 // Review
 .review {
     margin-bottom: 57px;
@@ -1312,6 +1389,15 @@
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
+
+        &__prev {
+            left: -19px;
+            right: auto;
+        }
+
+        &.swiper-button-disabled {
+            display: none !important;
+        }
 
         @include media(992) {
             display: none;
@@ -1469,6 +1555,11 @@
             font-size: 16px;
             line-height: 130%;
             color: #263238;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
             @include media(768) {
                 font-size: 14px;
@@ -2296,7 +2387,7 @@
         }
     }
 
-    ul {
+    &__list {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 20px;
@@ -2309,17 +2400,18 @@
         @include media(460) {
             // grid-template-columns: repeat(1, minmax(0, 1fr));
         }
-    }
+        
+        a {
+            height: 486px;
+            position: relative;
+            z-index: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            display: block;
     
-    li {
-        height: 486px;
-        position: relative;
-        z-index: 1;
-        border-radius: 10px;
-        overflow: hidden;
-
-        @include media(768) {
-            height: 380px;
+            @include media(768) {
+                height: 380px;
+            }
         }
     }
 

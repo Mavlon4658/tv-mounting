@@ -501,5 +501,34 @@ const reviewSwp = new Swiper('.review .swiper', {
       spaceBetween: 19,
       slidesPerView: 'auto',
     }
+  },
+  navigation: {
+    nextEl: '.review .swp-btn__next',
+    prevEl: '.review .swp-btn__prev',
   }
 })
+
+const reviewCard = document.querySelectorAll('.review .review-card');
+const reviewModal = document.querySelector('.review-modal');
+const reviewModalBtnClose = document.querySelector('.review-modal__close');
+const reviewModalBg = document.querySelector('.review-modal__bg');
+const reviewModalContent = document.querySelector('.review-modal__content-in');
+
+if (reviewCard.length) {
+  reviewCard.forEach(el => {
+    const btn = el.querySelector('.more-link');
+    btn.onclick = e => {
+      e.preventDefault();
+      reviewModalContent.innerHTML = el.outerHTML;
+      reviewModal.classList.add('active');
+    }
+  })
+
+  reviewModalBtnClose.onclick = () => {
+    reviewModal.classList.remove('active');
+  }
+
+  reviewModalBg.onclick = () => {
+    reviewModal.classList.remove('active');
+  }
+}
