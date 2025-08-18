@@ -164,6 +164,16 @@ html {
 }
 // Btns end
 
-@import './layouts/header', './layouts/home', './layouts/blog', './layouts/preparation',
-  './layouts/blog-single', './layouts/service', './layouts/install',
-  './layouts/faq', './layouts/footer', './layouts//order', './layouts/main-page', './layouts/how-to';
+@import './layouts/header',
+        './layouts/home',
+        './layouts/blog',
+        './layouts/preparation',
+        './layouts/blog-single',
+        './layouts/service',
+        './layouts/install',
+        './layouts/faq',
+        './layouts/footer',
+        './layouts//order',
+        './layouts/main-page',
+        './layouts/how-to',
+        './layouts/price-order';
