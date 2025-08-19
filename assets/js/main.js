@@ -536,8 +536,8 @@ const priceOrderSwp = new Swiper('.price-order .swiper', {
   slidesPerView: 1,
   spaceBetween: 0,
   effect: 'fade',
-  initialSlide: 8,
-  // allowTouchMove: false,
+  // initialSlide: 8,
+  allowTouchMove: false,
 })
 
 const priceLine = document.querySelector('.price-order__head');
