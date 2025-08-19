@@ -8989,20 +8989,36 @@ html {
   }
 }
 .price-order .add-wall__accordion-body li {
-  border: 1px solid #d9d9d9;
   border-radius: 5px;
   padding: 14px 17px 15px 21px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  border: 2px solid transparent;
+  z-index: 1;
 }
 @media screen and (max-width: 700px) {
   .price-order .add-wall__accordion-body li {
     padding: 12px 16px;
   }
 }
+.price-order .add-wall__accordion-body li::before {
+  border: 1px solid #d9d9d9;
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 5px;
+}
 .price-order .add-wall__accordion-body li.active {
-  border: 2px solid #219EBC;
+  border-color: #219EBC;
+}
+.price-order .add-wall__accordion-body li.active::before {
+  display: none;
 }
 .price-order .add-wall__accordion-body li.active .calculation {
   border-color: #219EBC;
