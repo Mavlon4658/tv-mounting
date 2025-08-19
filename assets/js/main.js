@@ -498,7 +498,7 @@ const reviewSwp = new Swiper('.review .swiper', {
   breakpoints: {
     992: {
       spaceBetween: 19,
-      slidesPerView: 'auto',
+      slidesPerView: 4,
     }
   },
   navigation: {
@@ -536,8 +536,8 @@ const priceOrderSwp = new Swiper('.price-order .swiper', {
   slidesPerView: 1,
   spaceBetween: 0,
   effect: 'fade',
-  // initialSlide: 3,
-  allowTouchMove: false,
+  // initialSlide: 5,
+  // allowTouchMove: false,
 })
 
 const priceLine = document.querySelector('.price-order__head');

@@ -1429,7 +1429,9 @@
     }
 
     .swiper {
-        overflow: visible;
+        @include media(992) {
+            overflow: visible;
+        }
 
         &-wrapper {
             align-items: stretch;

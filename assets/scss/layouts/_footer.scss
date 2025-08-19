@@ -85,6 +85,14 @@
     }
   }
 
+  &_block {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
   .footer_link {
     width: max-content;
     font-weight: 400;

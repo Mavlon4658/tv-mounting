@@ -316,7 +316,7 @@
                       </li>
                     </ul>
                     <div class="tv-size__foot">
-                      <button class="delete-btn">Go back</button>
+                      <button onclick="priceOrderSwpSlideTO(0)" class="delete-btn">Go back</button>
                       <button onclick="priceOrderSwpSlideTO(2)" class="btn-orange">Next: TV mount & wire hiding</button>
                     </div>
                   </div>
@@ -407,7 +407,7 @@
                       </li>
                     </ul>
                     <div class="tv-size__foot">
-                      <button class="delete-btn">Go back</button>
+                      <button onclick="priceOrderSwpSlideTO(1)" class="delete-btn">Go back</button>
                       <button onclick="priceOrderSwpSlideTO(3)" class="btn-orange">Add TV to order</button>
                     </div>
                   </div>
@@ -491,7 +491,7 @@
                     <div class="tv-size__title">Select your TV size</div>
                     <ul class="tv-size__ratio-wrap">
                       <li>
-                        <input type="radio" name="tvSize" id="">
+                        <input type="radio" name="yourTvSize" id="">
                         <div class="tv-size__ratio">
                           <div class="tv-size__ratio-text">
                             Up to 35”
@@ -503,7 +503,7 @@
                         </div>
                       </li>
                       <li>
-                        <input type="radio" name="tvSize" id="">
+                        <input type="radio" name="yourTvSize" id="">
                         <div class="tv-size__ratio">
                           <div class="tv-size__ratio-text">
                             36-64”
@@ -515,7 +515,7 @@
                         </div>
                       </li>
                       <li>
-                        <input type="radio" checked name="tvSize" id="">
+                        <input type="radio" checked name="yourTvSize" id="">
                         <div class="tv-size__ratio">
                           <div class="tv-size__ratio-text">
                             65-75” <span>(most popular)</span>
@@ -527,7 +527,7 @@
                         </div>
                       </li>
                       <li>
-                        <input type="radio" name="tvSize" id="">
+                        <input type="radio" name="yourTvSize" id="">
                         <div class="tv-size__ratio">
                           <div class="tv-size__ratio-text">
                             77-90”
@@ -539,7 +539,7 @@
                         </div>
                       </li>
                       <li>
-                        <input type="radio" name="tvSize" id="">
+                        <input type="radio" name="yourTvSize" id="">
                         <div class="tv-size__ratio">
                           <div class="tv-size__ratio-text">
                             Above 90”
@@ -801,6 +801,13 @@
                       </div>
                     </div>
                   </div>
+                  <div class="add-wall__foot">
+                    <button class="delete-btn">
+                      <img src="./assets/images/delete-icon.png" width="16" alt="">
+                      <span>Delete</span>
+                    </button>
+                    <button onclick="priceOrderSwpSlideTO(3)" class="btn-orange">Add to Order</button>
+                  </div>
                 </div>
               </div>
               <!-- Step 6 -->
@@ -908,7 +915,7 @@
                       <div class="address-form__label">City</div>
                       <input type="text" placeholder="e.g. Los Angeles" class="address-form__inp">
                     </div>
-                    <div class="address-form__controle error">
+                    <div class="address-form__controle">
                       <div class="address-form__label">Zip Code</div>
                       <input type="text" placeholder="e.g. 90210" class="address-form__inp">
                       <p class="address-form__error">Please enter a valid ZIP code to proceed.</p>
@@ -1068,11 +1075,6 @@
               <li>
                 <a href="gmail:precision-mounting@gmail.com">
                   Precision-mounting@gmail.com
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Become a pro with us
                 </a>
               </li>
             </ul>

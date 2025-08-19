@@ -1885,8 +1885,10 @@ html {
     display: none;
   }
 }
-.review .swiper {
-  overflow: visible;
+@media screen and (max-width: 992px) {
+  .review .swiper {
+    overflow: visible;
+  }
 }
 .review .swiper-wrapper {
   align-items: stretch;
@@ -5330,6 +5332,11 @@ html {
   .footer span {
     font-size: 14px;
   }
+}
+.footer_block ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .footer .footer_link {
   width: -moz-max-content;
@@ -9025,6 +9032,23 @@ html {
     font-size: 12px;
   }
 }
+.price-order .add-wall__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+@media screen and (max-width: 700px) {
+  .price-order .add-wall__foot {
+    margin-top: 35px;
+  }
+}
+.price-order .add-wall__foot .btn-orange {
+  width: 191px;
+  height: 46px;
+  font-size: 16px;
+  font-weight: 500;
+}
 .price-order .work-date__calendar {
   max-width: 652px;
   width: 100%;
@@ -9242,6 +9266,17 @@ html {
   outline: none;
   padding: 0 16px 0 125px;
   background: transparent;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #263238;
+}
+.price-order .address-form__inp::-moz-placeholder {
+  color: #7c7c7c;
+}
+.price-order .address-form__inp::placeholder {
+  color: #7c7c7c;
 }
 @media screen and (max-width: 700px) {
   .price-order .address-form__inp {

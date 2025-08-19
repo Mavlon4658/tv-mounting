@@ -1043,6 +1043,24 @@
                 }
             }
         }
+
+        &__foot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 50px;
+
+            @include media(700) {
+                margin-top: 35px;
+            }
+
+            .btn-orange {
+                width: 191px;
+                height: 46px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
     }
 
     .work-date {
@@ -1268,6 +1286,15 @@
             outline: none;
             padding: 0 16px 0 125px;
             background: transparent;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+            color: #263238;
+            
+            &::placeholder {
+                color: #7c7c7c;
+            }
 
             @include media(700) {
                 padding-left: 108px;
