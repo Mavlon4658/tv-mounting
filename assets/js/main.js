@@ -536,13 +536,20 @@ const priceOrderSwp = new Swiper('.price-order .swiper', {
   slidesPerView: 1,
   spaceBetween: 0,
   effect: 'fade',
-  // initialSlide: 8,
+  initialSlide: 8,
   // allowTouchMove: false,
 })
 
 const priceLine = document.querySelector('.price-order__head');
 
 if (document.querySelector('.price-order .swiper')) {
+  for(let i=0; i<priceOrderSwp.slides.length; i++) {
+    if (i == priceOrderSwp.realIndex) {
+      priceLine.classList.add(`active-${i}`);
+    } else {
+      priceLine.classList.remove(`active-${i}`);
+    }
+  }
   priceOrderSwp.on('slideChange', () => {
     window.scrollTo(0, 0);
     for(let i=0; i<priceOrderSwp.slides.length; i++) {

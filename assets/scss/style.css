@@ -9390,16 +9390,25 @@ html {
   }
 }
 .price-order .booking-card__description {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.price-order .booking-card__description p {
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
   color: #000;
-  margin-top: 15px;
 }
 @media screen and (max-width: 700px) {
-  .price-order .booking-card__description {
+  .price-order .booking-card__description p {
     font-size: 13px;
   }
+}
+.price-order .booking-card__description p a {
+  display: inline;
+  text-decoration: underline;
 }
 
 .calculation {

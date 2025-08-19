@@ -142,7 +142,7 @@
             li:nth-child(1) p {
                 color: #adadad;
             }
-            
+
             li:nth-child(2) {
                 &::before {
                     display: block;
@@ -1419,14 +1419,25 @@
             }
 
             &__description {
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 140%;
-                color: #000;
                 margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                
+                p {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 140%;
+                    color: #000;
+    
+                    @include media(700) {
+                        font-size: 13px;
+                    }
 
-                @include media(700) {
-                    font-size: 13px;
+                    a {
+                        display: inline;
+                        text-decoration: underline;
+                    }
                 }
             }
         }
