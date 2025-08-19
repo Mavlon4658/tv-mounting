@@ -536,7 +536,7 @@ const priceOrderSwp = new Swiper('.price-order .swiper', {
   slidesPerView: 1,
   spaceBetween: 0,
   effect: 'fade',
-  initialSlide: 8,
+  // initialSlide: 8,
   // allowTouchMove: false,
 })
 
@@ -614,5 +614,30 @@ if (wallAccordions.length) {
       item.classList.toggle('active');
       accBody.style.maxHeight = accBody.style.maxHeight ? null : accBody.scrollHeight + 'px';
     });
+  })
+}
+
+const priceOrderStep1 = document.querySelectorAll('.price-order__step-validation');
+
+if (priceOrderStep1.length) {
+  priceOrderStep1.forEach(arr => {
+    const checkboxes = arr.querySelectorAll('ul li input');
+    const btn = arr.querySelector('.tv-size__foot .btn-orange');
+
+    checkboxes.forEach(inp => {
+      inp.onchange = () => {
+        let disable = true;
+        checkboxes.forEach(el => {
+          if (el.checked) {
+            disable = false;
+          }
+        })
+        if (disable) {
+          btn.classList.add('disabled');
+        } else {
+          btn.classList.remove('disabled')
+        }
+      }
+    })
   })
 }

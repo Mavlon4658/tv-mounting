@@ -115,12 +115,15 @@
             }
         }
 
-        &.active-6,
-        &.active-7 {
+        &.active-6 {
+            li:nth-child(1) p {
+                color: #adadad;
+            }
+
             li:nth-child(2) {
                 &::before {
                     display: block;
-                    right: -200%;
+                    right: 0;
                 }
 
                 .dot {
@@ -134,26 +137,27 @@
             }
         }
 
+        &.active-7,
         &.active-8 {
+            li:nth-child(1) p {
+                color: #adadad;
+            }
+            
             li:nth-child(2) {
                 &::before {
                     display: block;
+                    right: 0;
                 }
 
                 .dot {
                     background: #219EBC;
-                }
-
-                p {
-                    color: #28292B;
-                    font-weight: 500;
                 }
             }
 
             li:nth-child(3) {
                 &::before {
                     display: block;
-                    transform: translateX(15vw);
+                    right: 0;
                 }
 
                 .dot {
@@ -601,6 +605,11 @@
         &:hover {
             background: #d9d9d9;
         }
+    }
+
+    .btn-orange.disabled {
+        background: #ADADAD;
+        pointer-events: none;
     }
 
     &__box {

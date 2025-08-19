@@ -8177,35 +8177,38 @@ html {
     top: 29px;
   }
 }
-.price-order__head.active-6 li:nth-child(2)::before, .price-order__head.active-7 li:nth-child(2)::before {
-  display: block;
-  right: -200%;
+.price-order__head.active-6 li:nth-child(1) p {
+  color: #adadad;
 }
-.price-order__head.active-6 li:nth-child(2) .dot, .price-order__head.active-7 li:nth-child(2) .dot {
+.price-order__head.active-6 li:nth-child(2)::before {
+  display: block;
+  right: 0;
+}
+.price-order__head.active-6 li:nth-child(2) .dot {
   background: #219EBC;
 }
-.price-order__head.active-6 li:nth-child(2) p, .price-order__head.active-7 li:nth-child(2) p {
+.price-order__head.active-6 li:nth-child(2) p {
   color: #28292B;
   font-weight: 500;
 }
-.price-order__head.active-8 li:nth-child(2)::before {
-  display: block;
+.price-order__head.active-7 li:nth-child(1) p, .price-order__head.active-8 li:nth-child(1) p {
+  color: #adadad;
 }
-.price-order__head.active-8 li:nth-child(2) .dot {
+.price-order__head.active-7 li:nth-child(2)::before, .price-order__head.active-8 li:nth-child(2)::before {
+  display: block;
+  right: 0;
+}
+.price-order__head.active-7 li:nth-child(2) .dot, .price-order__head.active-8 li:nth-child(2) .dot {
   background: #219EBC;
 }
-.price-order__head.active-8 li:nth-child(2) p {
-  color: #28292B;
-  font-weight: 500;
-}
-.price-order__head.active-8 li:nth-child(3)::before {
+.price-order__head.active-7 li:nth-child(3)::before, .price-order__head.active-8 li:nth-child(3)::before {
   display: block;
-  transform: translateX(15vw);
+  right: 0;
 }
-.price-order__head.active-8 li:nth-child(3) .dot {
+.price-order__head.active-7 li:nth-child(3) .dot, .price-order__head.active-8 li:nth-child(3) .dot {
   background: #219EBC;
 }
-.price-order__head.active-8 li:nth-child(3) p {
+.price-order__head.active-7 li:nth-child(3) p, .price-order__head.active-8 li:nth-child(3) p {
   color: #28292B;
   font-weight: 500;
 }
@@ -8614,6 +8617,10 @@ html {
 }
 .price-order .edit-btn:hover {
   background: #d9d9d9;
+}
+.price-order .btn-orange.disabled {
+  background: #ADADAD;
+  pointer-events: none;
 }
 .price-order__box {
   max-width: 449px;
