@@ -9114,6 +9114,10 @@ html {
   background: #219ebc;
   color: white;
 }
+.price-order .work-date__calendar li.disabled {
+  pointer-events: none;
+  opacity: 0;
+}
 .price-order .work-date__time {
   max-width: 856px;
   width: 100%;

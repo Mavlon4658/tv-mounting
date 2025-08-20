@@ -536,8 +536,8 @@ const priceOrderSwp = new Swiper('.price-order .swiper', {
   slidesPerView: 1,
   spaceBetween: 0,
   effect: 'fade',
-  // initialSlide: 5,
-  allowTouchMove: false,
+  initialSlide: 6,
+  // allowTouchMove: false,
 })
 
 const priceLine = document.querySelector('.price-order__head');
@@ -647,4 +647,69 @@ if (priceOrderStep1.length) {
       }
     })
   })
+}
+
+const calendar = document.querySelector('.work-date__calendar');
+
+if (calendar) {
+  const selectedText = document.getElementById('selectedDate');
+  calendar.innerHTML = '';
+
+  const today = new Date();
+  today.setHours(0,0,0,0);
+
+  const jsDay = today.getDay();
+  const mondayBased = jsDay === 0 ? 7 : jsDay; 
+  const leadingDisabled = mondayBased - 1;
+
+  const TOTAL_CELLS = 28;
+  let selectedCell = null;
+
+  // Helper: format "12 February 2025"
+  function formatDate(date) {
+    return date.toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    });
+  }
+
+  function makeCell(dateObj, disabled=false, isToday=false) {
+    const el = document.createElement('li');
+    el.className = disabled ? 'disabled' : '';
+    el.textContent = dateObj.getDate();
+    el.dataset.fullDate = dateObj.toISOString();
+
+    if (isToday) {
+      el.classList.add('today', 'selected');
+      selectedCell = el;
+      selectedText.textContent = formatDate(dateObj);
+    }
+
+    if (!disabled) {
+      el.addEventListener('click', () => {
+        if (selectedCell) selectedCell.classList.remove('selected');
+        el.classList.add('selected');
+        selectedCell = el;
+        selectedText.textContent = formatDate(new Date(el.dataset.fullDate));
+      });
+    }
+
+    return el;
+  }
+
+  // 1) Oldingi kunlarni disabled bilan to‘ldirish
+  for (let i = leadingDisabled; i > 0; i--) {
+    const d = new Date(today);
+    d.setDate(today.getDate() - i);
+    calendar.appendChild(makeCell(d, true));
+  }
+
+  // 2) Bugun va keyingi kunlar
+  const remaining = TOTAL_CELLS - leadingDisabled;
+  for (let i = 0; i < remaining; i++) {
+    const d = new Date(today);
+    d.setDate(today.getDate() + i);
+    calendar.appendChild(makeCell(d, false, i === 0));
+  }
 }
