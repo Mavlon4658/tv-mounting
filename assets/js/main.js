@@ -536,8 +536,8 @@ const priceOrderSwp = new Swiper('.price-order .swiper', {
   slidesPerView: 1,
   spaceBetween: 0,
   effect: 'fade',
-  initialSlide: 6,
-  // allowTouchMove: false,
+  // initialSlide: 6,
+  allowTouchMove: false,
 })
 
 const priceLine = document.querySelector('.price-order__head');
@@ -665,7 +665,6 @@ if (calendar) {
   const TOTAL_CELLS = 28;
   let selectedCell = null;
 
-  // Helper: format "12 February 2025"
   function formatDate(date) {
     return date.toLocaleDateString("en-GB", {
       day: "numeric",
@@ -698,14 +697,12 @@ if (calendar) {
     return el;
   }
 
-  // 1) Oldingi kunlarni disabled bilan to‘ldirish
   for (let i = leadingDisabled; i > 0; i--) {
     const d = new Date(today);
     d.setDate(today.getDate() - i);
     calendar.appendChild(makeCell(d, true));
   }
 
-  // 2) Bugun va keyingi kunlar
   const remaining = TOTAL_CELLS - leadingDisabled;
   for (let i = 0; i < remaining; i++) {
     const d = new Date(today);
